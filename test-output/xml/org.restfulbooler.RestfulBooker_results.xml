@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="J:/3. automation testing/day34-- folder structure of maven, upload to github/Assignment Answers/restfullbooker"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="18.978">
+    <properties></properties>
+
+
+
+            <testcase
+                name="postUserNameAndPassword"
+                time="18.978"
+                classname="org.restfulbooler.RestfulBooker">
+            </testcase>
+</testsuite>

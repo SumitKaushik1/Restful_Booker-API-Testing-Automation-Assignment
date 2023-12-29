@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="J:/3. automation testing/day34-- folder structure of maven, upload to github/Assignment Answers/restfullbooker">
+        <classes>
+          <!--  <class name="org.restfulbooler.AppTest">
+                <methods>
+                    <include name="shouldAnswerWithTrue"/>
+                </methods>
+            </class>-->
+            <class name="org.restfulbooler.RestfulBooker">
+                <methods>
+                    <include name="postUserNameAndPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
