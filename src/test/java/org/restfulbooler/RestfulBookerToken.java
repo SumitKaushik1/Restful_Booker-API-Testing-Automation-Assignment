@@ -9,6 +9,7 @@ import io.restassured.response.Response;
 
 
 import io.restassured.module.jsv.JsonSchemaValidator;
+import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 
 import org.hamcrest.Matcher;
@@ -17,7 +18,12 @@ import org.hamcrest.Matchers;
 import org.restfulbooler.pojo.Customer;
 import org.testng.annotations.Test;
 
+
+
+
 import java.io.File;
+
+import static io.restassured.RestAssured.given;
 
   /*
                     Certainly! Let's compare the two provided code snippets, one following a BDD style and the other following a non-BDD style, focusing on their structure, readability, and use of natural language:
@@ -236,7 +242,7 @@ public class RestfulBookerToken {
                      //giving me error so we has to change the suitable string using the Gson then pass to the body of response
                      Gson gson=new Gson();
                      String payload= gson.toJson(customer);
-                     RequestSpecification requestSpecification=RestAssured.given();
+                     RequestSpecification requestSpecification= given();
 
 
                      requestSpecification.baseUri("https://restful-booker.herokuapp.com");
@@ -249,7 +255,7 @@ public class RestfulBookerToken {
                     Response response= requestSpecification.when().post();
 
                 //1.
-                 MatcherAssert. assertThat(response.getStatusCode(), Matchers.is(200));
+                 MatcherAssert.assertThat(response.getStatusCode(), Matchers.is(200));
                  //	assertThat(T actual, Matcher<? super T> matcher)
                      //-> now when we call the assertThat method in the second arguement we can pass hte Integer and
                      // teh classes which is superclass of integer like Number
@@ -279,19 +285,6 @@ public class RestfulBookerToken {
                          it can be used to match strings. If you have a Matcher<? super String>,
                          it can still be used to match strings, but it can also be used to match objects
                          of types that are superclasses of String.*/
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -337,15 +330,44 @@ public class RestfulBookerToken {
 
                      //Restfull booker is the class which is loaded first then all the static variable inside that class loaded then
                      // so static variable is at the class level when then7 class the destroyed in then only static variable is destroyed
-                     //per class you can make only one type of variable name can be static variable
+                     //per class you can make only one type of variable name can be static variable.
 
-                     MatcherAssert.assertThat(response, JsonSchemaValidator.matchesJsonSchema(new File("src/test/java/resource/schema.json")));
+
+
+
+
+                     //1 to 4 ,all request was made till "when"  ie so upto when hamcrest liberary can be used for the validation the response
+
+                   //5. in this then() has to used which return the implementation class of validation reponse which  can help easily to validate the schema
+                     ValidatableResponse validatableResponse =response.then();
+
+
+
+                            validatableResponse.assertThat()
+                             .body(JsonSchemaValidator.
+                                     matchesJsonSchema(new File("src/test/java/resource/schema.json")));
 
 
 
 
 
                  }
+
+
+                 @Test
+                        void post2(){
+
+
+
+                 }
+
+
+
+
+
+
+
+
 
 
 
