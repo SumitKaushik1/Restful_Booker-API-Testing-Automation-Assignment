@@ -4,14 +4,20 @@ package org.restfulbooler;
 import com.google.gson.Gson;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
+
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.specification.RequestSpecification;
 
+import org.hamcrest.Matcher;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.restfulbooler.pojo.Customer;
 import org.testng.annotations.Test;
+
+import java.io.File;
 
   /*
                     Certainly! Let's compare the two provided code snippets, one following a BDD style and the other following a non-BDD style, focusing on their structure, readability, and use of natural language:
@@ -156,30 +162,15 @@ Both styles use RestAssured for API testing but differ in their approach to stru
                              Both styles use RestAssured for API testing but differ in their approach to structuring and expressing tests. The choice between them often depends on team                         preferences and project requirements.
                      */
 
+//currently you know about the bdd style only ie given when then so use that only
+// we donot use the chaining instead we use non-chaining way bz again we have to apply whole line again and agian
 
-
-
-
-
-
-
-
-
-
-
-
-public class RestfulBookerToken {
-
-
-    //currently you know about the bdd style only ie given when then so use that only
-    // we donot use the chaining instead we use non-chaining way bz again we have to apply whole line again and agian
-
-    // you cannot use this below line outside any method it will give error
-    //   RequestSpecification r=RestAssured.given();
-    //
-    //
-    //                     r.baseUri("https://restful-booker.herokuapp.com");
-    //                     r.basePath("/auth");
+// you cannot use this below line outside any method it will give error
+//   RequestSpecification r=RestAssured.given();
+//
+//
+//                     r.baseUri("https://restful-booker.herokuapp.com");
+//                     r.basePath("/auth");
 
 /*
 String payload -> 1. cannot reuse the payload,2.static /non dyamic ,3.difficult to maintain in automation framework ,4.limited validation the response-string extra and limited(object)
@@ -209,6 +200,21 @@ test case>100
  */
 
 
+
+
+
+
+
+
+
+
+
+public class RestfulBookerToken {
+
+
+
+
+
                  @Test
     void  postUserNameAndPassword(){
                      /* payload.setUsername("admin");
@@ -227,7 +233,7 @@ test case>100
 
 
                      Customer customer=new Customer("admin","password123");//directly passing the object to body
-                     //giving me error so we has to change the suitable string using the Gson then pass to the body of resposne
+                     //giving me error so we has to change the suitable string using the Gson then pass to the body of response
                      Gson gson=new Gson();
                      String payload= gson.toJson(customer);
                      RequestSpecification requestSpecification=RestAssured.given();
@@ -242,7 +248,7 @@ test case>100
                      //since the payload is the object type so the body has the overloaded method which has argument Object
                     Response response= requestSpecification.when().post();
 
-
+                //1.
                  MatcherAssert. assertThat(response.getStatusCode(), Matchers.is(200));
                  //	assertThat(T actual, Matcher<? super T> matcher)
                      //-> now when we call the assertThat method in the second arguement we can pass hte Integer and
@@ -298,13 +304,25 @@ test case>100
                     //it means with jasonpath you can get the values of response body and
                      // with hemcrest you can assert the values of response headers and the respone body,status code,
 
-                    // JsonPath jsonPath = new JsonPath(response1.asString());
+                     //2. to get value fromt the respone use the jsonpath
+                     JsonPath jsonPath = new JsonPath(response.asString());
+                     System.out.println(jsonPath.getString("token"));//$.token ->jasonpath
 
-                   //  System.out.println(jsonPath.getString("token"));//$.token ->jasonpath
+                     //MatcherAssert.assertThat(response.getHeaders(), hasKey("Content-Type"));
 
-                    // MatcherAssert.assertThat(response1.getHeaders(), hasKey("Content-Type"));
 
-                    // MatcherAssert.assertThat(String.valueOf(response1.getHeaders().hasHeaderWithName("Content-type")),true);
+                     //3. (by content ype you get-> true),true since both true matched so assertion is passed
+                     MatcherAssert.assertThat(String.valueOf(response.getHeaders().hasHeaderWithName("Content-type")),true);
+
+                     //4.
+                     System.out.println(response.asPrettyString());
+                     // "token" :"1343434", value in double quotes so it is string only ,now left side "12334" comes,right side
+                     // ,there is with Matcher object that it gives signal that it must not be the null value
+                     // equivalent to $.token
+                    MatcherAssert.assertThat(response.getBody().jsonPath().getString("token"),Matchers.notNullValue());
+
+
+
 
 
 
@@ -314,6 +332,16 @@ test case>100
                      // r.then().statusCode(200);
                      // r.then().log().all().body("token", Matchers.notNullValue());// Hamcrest liberary  Matchers class
                      // assertion is done ie the token part should not be null then only we can store it
+
+
+
+                     //Restfull booker is the class which is loaded first then all the static variable inside that class loaded then
+                     // so static variable is at the class level when then7 class the destroyed in then only static variable is destroyed
+                     //per class you can make only one type of variable name can be static variable
+
+                     MatcherAssert.assertThat(response, JsonSchemaValidator.matchesJsonSchema(new File("src/test/java/resource/schema.json")));
+
+
 
 
 
