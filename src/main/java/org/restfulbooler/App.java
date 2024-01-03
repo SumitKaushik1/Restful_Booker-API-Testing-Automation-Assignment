@@ -1,4 +1,4 @@
-package org.restfulbooler;
+package org.restfullbooker;
 
 /**
  * Hello world!

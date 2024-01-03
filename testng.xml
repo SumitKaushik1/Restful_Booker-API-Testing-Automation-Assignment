@@ -8,7 +8,7 @@
                     <include name="shouldAnswerWithTrue"/>
                 </methods>
             </class>-->
-            <class name="org.restfulbooler.RestfulBookerToken">
+            <class name="org.restfullbooker.restfullbooker.task1postive.createtoken.RestfulBookerToken">
                 <methods>
                     <include name="postUserNameAndPassword"/>
                 </methods>

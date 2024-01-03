@@ -1,21 +1,15 @@
-package org.restfulbooler;
+package org.restfullbooker.task1postive.createtoken;
 
 
-import com.google.gson.Gson;
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.ValidatableResponse;
-import io.restassured.specification.RequestSpecification;
 
-import org.hamcrest.Matcher;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
-import org.restfulbooler.pojo.Customer;
 import org.testng.annotations.Test;
 
 
@@ -216,43 +210,12 @@ test case>100
 
 
 public class RestfulBookerToken {
-
-
-
-
-
+    //@Test is the annotation which tells the metadata to compiler that compiler use to show further ui on the console after result
+    // to testng file that these are test cases of testng
                  @Test
-    void  postUserNameAndPassword(){
-                     /* payload.setUsername("admin");
-                     payload.setPassword("password123");*/
+    void  resfullBoookerTokenStatusOk(){
 
-                   /*  String payload = "{\n" +
-                             "    \"username\" : \"admin\",\n" +
-                             "    \"password\" : \"password123\"\n" +
-                             "}";*/
-               //serialisation means to convert the object in the byte of streams (ie the jason format or xml format) then \
-                     // 10110 is send on the network
-
-
-
-
-
-
-                     Customer customer=new Customer("admin","password123");//directly passing the object to body
-                     //giving me error so we has to change the suitable string using the Gson then pass to the body of response
-                     Gson gson=new Gson();
-                     String payload= gson.toJson(customer);
-                     RequestSpecification requestSpecification= given();
-
-
-                     requestSpecification.baseUri("https://restful-booker.herokuapp.com");
-                     requestSpecification.basePath("/auth");
-                     requestSpecification.contentType(ContentType.JSON);//header is set
-                     requestSpecification.body(payload);//it will set as the class for payload (no map and string )
-                     // , class for more than 150 test case
-                     /* Response response=*/ // and it can be dynamic
-                     //since the payload is the object type so the body has the overloaded method which has argument Object
-                    Response response= requestSpecification.when().post();
+               Response response= RestFullBookerRequestTokenURL.request();
 
                 //1.
                  MatcherAssert.assertThat(response.getStatusCode(), Matchers.is(200));
@@ -290,35 +253,6 @@ public class RestfulBookerToken {
 
 
 
-
-
-
-                   //  System.out.println(response1.asString());
-                    //it means with jasonpath you can get the values of response body and
-                     // with hemcrest you can assert the values of response headers and the respone body,status code,
-
-                     //2. to get value fromt the respone use the jsonpath
-                     JsonPath jsonPath = new JsonPath(response.asString());
-                     System.out.println(jsonPath.getString("token"));//$.token ->jasonpath
-
-                     //MatcherAssert.assertThat(response.getHeaders(), hasKey("Content-Type"));
-
-
-                     //3. (by content ype you get-> true),true since both true matched so assertion is passed
-                     MatcherAssert.assertThat(String.valueOf(response.getHeaders().hasHeaderWithName("Content-type")),true);
-
-                     //4.
-                     System.out.println(response.asPrettyString());
-                     // "token" :"1343434", value in double quotes so it is string only ,now left side "12334" comes,right side
-                     // ,there is with Matcher object that it gives signal that it must not be the null value
-                     // equivalent to $.token
-                    MatcherAssert.assertThat(response.getBody().jsonPath().getString("token"),Matchers.notNullValue());
-
-
-
-
-
-
                        /* ValidatableResponse vr =response.then().log().all();
                       vr.statusCode(200);*/
 
@@ -326,48 +260,72 @@ public class RestfulBookerToken {
                      // r.then().log().all().body("token", Matchers.notNullValue());// Hamcrest liberary  Matchers class
                      // assertion is done ie the token part should not be null then only we can store it
 
-
-
-                     //Restfull booker is the class which is loaded first then all the static variable inside that class loaded then
-                     // so static variable is at the class level when then7 class the destroyed in then only static variable is destroyed
-                     //per class you can make only one type of variable name can be static variable.
-
-
-
-
-
-                     //1 to 4 ,all request was made till "when"  ie so upto when hamcrest liberary can be used for the validation the response
-
-                   //5. in this then() has to used which return the implementation class of validation reponse which  can help easily to validate the schema
-                     ValidatableResponse validatableResponse =response.then();
-
-
-
-                            validatableResponse.assertThat()
-                             .body(JsonSchemaValidator.
-                                     matchesJsonSchema(new File("src/test/java/resource/schema.json")));
-
-
-
-
-
                  }
 
 
                  @Test
-                        void post2(){
+                        void  resfullBoookerTokenHeaderContentType() {
+
+                         Response response = RestFullBookerRequestTokenURL.request();
+                         //3. (by content ype you get-> true),true since both true matched so assertion is passed
+                         MatcherAssert.assertThat(String.valueOf(response.getHeaders().hasHeaderWithName("Content-type")), true);
+
+                     }
+
+
+                     @Test
+                     void resfullBoookerTokenBodyToken () {
 
 
 
-                 }
+
+                         Response response = RestFullBookerRequestTokenURL.request();
+
+                         //  System.out.println(response1.asString());
+                         //it means with jasonpath you can get the values of response body and
+                         // with hemcrest you can assert the values of response headers and the respone body,status code,
+
+                         //2. to get value fromt the respone use the jsonpath
+                         JsonPath jsonPath = new JsonPath(response.asString());
+                         System.out.println(jsonPath.getString("token"));//$.token ->jasonpath
+
+                         //MatcherAssert.assertThat(response.getHeaders(), hasKey("Content-Type"));
+
+
+                         //Restfull booker is the class which is loaded first then all the static variable inside that class loaded then
+                         // so static variable is at the class level when then7 class the destroyed in then only static variable is destroyed
+                         //per class you can make only one type of variable name can be static variable.
 
 
 
+                         //3. (by content ype you get-> true),true since both true matched so assertion is passed
+                         //4.
+                         System.out.println(response.asPrettyString());
+                         // "token" :"1343434", value in double quotes so it is string only ,now left side "12334" comes,right side
+                         // ,there is with Matcher object that it gives signal that it must not be the null value
+                         // equivalent to $.token
+                         MatcherAssert.assertThat(response.getBody().jsonPath().getString("token"),Matchers.notNullValue());
+                     }
+
+
+                @Test
+                void  resfullBoookerTokenBodyJsonSchema() {
+
+                    Response response = RestFullBookerRequestTokenURL.request();
+                    //1 to 4 ,all request was made till "when"  ie so upto when hamcrest liberary can be used for the validation the response
+
+                    //5. in this then() has to used which return the implementation class of validation reponse which  can help easily to validate the schema
+                    ValidatableResponse validatableResponse =response.then();
 
 
 
+                    validatableResponse.assertThat()
+                            .body(JsonSchemaValidator.
+                                    matchesJsonSchema(new File("src/test/java/resource/schema.json")));
 
 
+
+                }
 
 
 

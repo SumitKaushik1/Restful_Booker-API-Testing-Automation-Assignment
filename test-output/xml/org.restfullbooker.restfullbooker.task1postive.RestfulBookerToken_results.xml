@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="restfullbooker"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="13.373">
+    <properties></properties>
+
+
+
+            <testcase
+                name="resfullBoookerTokenStatusOk"
+                time="1.165"
+                classname="org.restfullbooker.restfullbooker.task1postive.createtoken.RestfulBookerToken">
+            </testcase>
+            <testcase
+                name="resfullBoookerTokenHeaderContentType"
+                time="1.303"
+                classname="org.restfullbooker.restfullbooker.task1postive.createtoken.RestfulBookerToken">
+            </testcase>
+            <testcase
+                name="resfullBoookerTokenBodyJsonSchema"
+                time="7.749"
+                classname="org.restfullbooker.restfullbooker.task1postive.createtoken.RestfulBookerToken">
+            </testcase>
+            <testcase
+                name="resfullBoookerTokenBodyToken"
+                time="3.156"
+                classname="org.restfullbooker.restfullbooker.task1postive.createtoken.RestfulBookerToken">
+            </testcase>
+</testsuite>

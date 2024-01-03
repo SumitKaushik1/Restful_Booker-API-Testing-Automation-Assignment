@@ -1,4 +1,4 @@
-package org.restfulbooler.pojo;
+package org.restfullbooker.pojo;
 
 public class Customer {
     private String username;
