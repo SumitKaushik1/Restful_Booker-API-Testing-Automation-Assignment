@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="restfullbooker"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="4.554">
+    <properties></properties>
+
+
+
+            <testcase
+                name="postRequest"
+                time="2.420"
+                classname="org.restfullbooker.task_1_positive._2_createbooking.PUTNonBDDRequest">
+            </testcase>
+            <testcase
+                name="NonBDDStylePUTRequest"
+                time="2.134"
+                classname="org.restfullbooker.task_1_positive._2_createbooking.PUTNonBDDRequest">
+            </testcase>
+</testsuite>

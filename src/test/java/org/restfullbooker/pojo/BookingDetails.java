@@ -5,24 +5,24 @@ public class BookingDetails {
     private String lastname;
     private int totalprice;
 
-    private boolean depositepaid;
+    private boolean depositpaid;
 
     private BookingDates bookingdates;
 
-    private String addtionalneeds;
+    private String additionalneeds;
 
     public BookingDetails() {
 
     }
 
 
-    public BookingDetails(String firstName, String lastName, int totalPrice, boolean depositePaid, BookingDates bookingDates, String addtionalneeds) {
+    public BookingDetails(String firstName, String lastName, int totalPrice, boolean depositePaid, BookingDates bookingDates, String additionalneeds) {
         this.firstname = firstName;
         this.lastname = lastName;
         this.totalprice = totalPrice;
-        this.depositepaid = depositePaid;
+        this.depositpaid = depositePaid;
         this.bookingdates = bookingDates;
-        this.addtionalneeds = addtionalneeds;
+        this.additionalneeds = additionalneeds;
     }
 
     public void getFirstName(String firstName){
@@ -38,11 +38,11 @@ public class BookingDetails {
     }
 
     public void getDepositePaid(boolean depositePaid){
-        this.depositepaid=depositepaid;
+        this.depositpaid=depositpaid;
     }
 
     public boolean isDepositePaid() {
-        return depositepaid;
+        return depositpaid;
     }
 
     public BookingDates getBookingDates() {
@@ -50,7 +50,7 @@ public class BookingDetails {
     }
 
     public String getAddtionalneeds() {
-        return addtionalneeds;
+        return additionalneeds;
     }
 
     public void setFirstName(String firstName) {
@@ -66,7 +66,7 @@ public class BookingDetails {
     }
 
     public void setDepositePaid(boolean depositePaid) {
-        this.depositepaid = depositepaid;
+        this.depositpaid = depositpaid;
     }
 
     public void setBookingDates(BookingDates bookingDates) {
@@ -74,7 +74,7 @@ public class BookingDetails {
     }
 
     public void setAddtionalneeds(String addtionalneeds) {
-        this.addtionalneeds = addtionalneeds;
+        this.additionalneeds = additionalneeds;
     }
 
     @Override
@@ -83,9 +83,9 @@ public class BookingDetails {
                 "firstName='" + firstname + '\'' +
                 ", lastName='" + lastname + '\'' +
                 ", totalPrice=" + totalprice +
-                ", depositePaid=" + depositepaid +
+                ", depositePaid=" + depositpaid +
                 ", bookingDates=" + bookingdates +
-                ", addtionalneeds='" + addtionalneeds + '\'' +
+                ", additionalneeds='" + additionalneeds + '\'' +
                 '}';
     }
 

@@ -4,29 +4,29 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="15.990">
+           time="15.691">
     <properties></properties>
 
 
 
             <testcase
+                name="resfullBoookerTokenStatusOk"
+                time="6.369"
+                classname="org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases">
+            </testcase>
+            <testcase
                 name="resfullBoookerTokenHeaderContentType"
-                time="1.193"
+                time="2.082"
                 classname="org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases">
             </testcase>
             <testcase
                 name="resfullBoookerTokenBodyToken"
-                time="3.563"
-                classname="org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases">
-            </testcase>
-            <testcase
-                name="resfullBoookerTokenStatusOk"
-                time="8.243"
+                time="3.726"
                 classname="org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases">
             </testcase>
             <testcase
                 name="resfullBoookerTokenBodyJsonSchema"
-                time="2.991"
+                time="3.514"
                 classname="org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases">
             </testcase>
 </testsuite>

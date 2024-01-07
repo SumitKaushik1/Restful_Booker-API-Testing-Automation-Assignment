@@ -1,9 +1,12 @@
 package org.restfullbooker.task_1_positive._2_createbooking;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
+import io.restassured.specification.RequestSpecification;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.restfullbooker.task_1_positive._1_createtoken.RestFullBookerRequestTokenURL;
@@ -17,8 +20,17 @@ import static org.restfullbooker.task_1_positive._2_createbooking.RestFullBooker
 public class RestfullBookerCreateBookingTestCases {
 
 
+
+    RequestSpecification requestSpecification= RestAssured.given();
+    ValidatableResponse validatableResponse;
+    String token;
+
+
+
+
     @Test
     void  resfullBookerCreateBookingStatusOk() throws JsonProcessingException {
+
         Response response= request();
 
 
@@ -32,7 +44,11 @@ public class RestfullBookerCreateBookingTestCases {
 
         Response response = request();
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
+        System.out.println(response.getHeaders().toString());
         MatcherAssert.assertThat(String.valueOf(response.getHeaders().hasHeaderWithName("Content-type")), true);
+
+
+
 
     }
 
@@ -56,5 +72,11 @@ public class RestfullBookerCreateBookingTestCases {
 
 
     }
+
+
+
+
+
+
 
 }
