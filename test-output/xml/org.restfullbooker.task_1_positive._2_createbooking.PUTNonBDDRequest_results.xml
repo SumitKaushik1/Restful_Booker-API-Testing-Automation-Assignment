@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="restfullbooker"
+<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker/src/test/java/org/restfullbooker"
            tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="4.554">
+           time="2.786">
     <properties></properties>
 
 
 
             <testcase
-                name="postRequest"
-                time="2.420"
+                name="NonBDDStylePUTRequest"
+                time="1.442"
                 classname="org.restfullbooker.task_1_positive._2_createbooking.PUTNonBDDRequest">
             </testcase>
             <testcase
-                name="NonBDDStylePUTRequest"
-                time="2.134"
+                name="postRequest"
+                time="1.344"
                 classname="org.restfullbooker.task_1_positive._2_createbooking.PUTNonBDDRequest">
             </testcase>
 </testsuite>

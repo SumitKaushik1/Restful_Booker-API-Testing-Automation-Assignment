@@ -1,14 +1,12 @@
 package org.restfullbooker.task_1_positive._2_createbooking;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
-import org.restfullbooker.pojo.BookingDates;
 import org.restfullbooker.pojo.BookingDetails;
 
 import static io.restassured.RestAssured.given;
@@ -75,47 +73,13 @@ public class RestFullBookerRequestBookingURL {
 
 
 
-    static  Response request() throws JsonProcessingException {
+    static  Response request() throws JsonProcessingException{
 
-/*        // since booking deatils must have two types of constructor one is the non-parameterized for the 30 line and
-        // paramterized for the 31 th line
-        //  BookingDetails.BookingDates bookingDates=new BookingDetails().new BookingDates("2018-01-01","2019-01-01");
-
-        BookingDates bookingDates= new BookingDates("2018-01-01","2019-01-01");
-
-        BookingDetails bookingDetails=new BookingDetails("Jim","Brown",111,true,bookingDates,"Breakfast");//directly passing the object to body
-        //when two clases closely packed so no need to creat the inner class as the seperate classs and try to import
-        // instead make it as the inner nested  class and and you can save a one .java file
-
-
-        //giving me error so we has to change the suitable string using the Gson then pass to the body of response
-        Gson gson=new Gson();
-        String payload= gson.toJson(bookingDetails);
-        System.out.println(payload);
-
-        RequestSpecification requestSpecification= given();
-
-
-
-
-        requestSpecification.baseUri("https://restful-booker.herokuapp.com/");
-        requestSpecification.basePath("booking");
-        requestSpecification.contentType(ContentType.JSON);//header is set
-        requestSpecification.accept(ContentType.JSON);//header is set
-        System.out.println(token);
-        requestSpecification.cookie(token);
-        // Adding body as string
-        //requestSpecification.body(payload);
-
-        System.out.println(requestSpecification.post().asString());*/
-
-        // return requestSpecification.post();
-
-        RequestSpecification requestSpecification= RestAssured.given();
+      /*  RequestSpecification requestSpecification= RestAssured.given();
         ValidatableResponse validatableResponse;
         String token;
 
-        String jsonString = "{\r\n" + "    \"firstname\" : \"Pramod\",\r\n" + "    \"lastname\" : \"Dutta\",\r\n"
+        String payload = "{\r\n" + "    \"firstname\" : \"Pramod\",\r\n" + "    \"lastname\" : \"Dutta\",\r\n"
                 + "    \"totalprice\" : 111,\r\n" + "    \"depositpaid\" : true,\r\n" + "    \"bookingdates\" : {\r\n"
                 + "        \"checkin\" : \"2018-01-01\",\r\n" + "        \"checkout\" : \"2019-01-01\"\r\n"
                 + "    },\r\n" + "    \"additionalneeds\" : \"Breakfast\"\r\n" + "}";
@@ -126,17 +90,60 @@ public class RestFullBookerRequestBookingURL {
         // ContentType is an ENUM.
         requestSpecification.contentType(ContentType.JSON);
         // Adding URI
-        requestSpecification.baseUri("https://restful-booker.herokuapp.com/");
-        requestSpecification.basePath("booking");
+        requestSpecification.baseUri("https://restful-booker.herokuapp.com");
+        requestSpecification.basePath("/booking");
         // Adding body as string
-        requestSpecification.body(jsonString);
+        requestSpecification.body(payload);
 
         Response response = requestSpecification.post();
         // Printing Response as string
         System.out.println(response.asString());
-       return response;
+
+          return response;
+*/
 
 
+
+
+
+        // since booking deatils must have two types of constructor one is the non-parameterized for the 30 line and
+        // paramterized for the 31 th line
+
+        //when inner nested class is made to avoid making seperate class we can access by it
+        BookingDetails.BookingDates bookingDates=new BookingDetails().new BookingDates("2018-01-01","2019-01-01");
+
+        //  BookingDates bookingDates= new BookingDates("2018-01-01","2019-01-01");//when seperate bookingDates class is made
+        BookingDetails bookingDetails=new BookingDetails("Jim","Brown",111,true,bookingDates,"Breakfast");
+        //directly passing the object to body
+        //when two clases closely packed so no need to creat the inner class as the seperate classs and try to import
+        // instead make it as the inner nested  class and and you can save a one .java file
+
+
+        //giving me error so we has to change the suitable string using the Gson then pass to the body of response
+        Gson gson=new Gson();
+        String payload= gson.toJson(bookingDetails);
+        System.out.println(payload);
+
+
+        RequestSpecification requestSpecification= RestAssured.given();
+        // Setting content type to specify format in which request payload will be sent.
+        // ContentType is an ENUM.
+        requestSpecification.contentType(ContentType.JSON);
+        //requestSpecification.accept(ContentType.JSON);//header is set
+        //note bydefault the accept response is json no need to specify that otherwise it will give error
+        System.out.println(token);
+        requestSpecification.cookie(token);
+        // Adding URI
+        requestSpecification.baseUri("https://restful-booker.herokuapp.com");
+        requestSpecification.basePath("/booking");
+        // Adding body as string
+        requestSpecification.body(payload);
+
+        Response response = requestSpecification.post();
+        // Printing Response as string
+        System.out.println(response.asString());
+
+        return response;
 
 
     }
