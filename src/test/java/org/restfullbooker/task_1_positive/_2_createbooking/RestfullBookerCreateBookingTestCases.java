@@ -22,7 +22,7 @@ public class RestfullBookerCreateBookingTestCases {
 
 
 
-    public static String bookingid;
+    public static String  bookingidToUpdate;
     @Test
     void  resfullBookerCreateBookingStatusOk() throws JsonProcessingException {
 
@@ -62,7 +62,7 @@ public class RestfullBookerCreateBookingTestCases {
 
         validatableResponse.assertThat()
                 .body(JsonSchemaValidator.
-                        matchesJsonSchema(new File("src/test/java/resource/schema1.json")));
+                        matchesJsonSchema(new File("src/test/java/resource/task1/schema1.json")));
 
 
 
@@ -84,10 +84,10 @@ public class RestfullBookerCreateBookingTestCases {
 
         //2. to get value from the response use the jsonpath
         JsonPath jsonPath = new JsonPath(response.asString());
-        bookingid=jsonPath.getString("bookingid");
+        bookingidToUpdate=jsonPath.getString("bookingid");
 
         //static variable withing a class can be accessed
-        System.out.println(bookingid);//$.bookingid ->jasonpath
+        System.out.println(bookingidToUpdate);//$.bookingid ->jasonpath
 
         //MatcherAssert.assertThat(response.getHeaders(), hasKey("Content-Type"));
 

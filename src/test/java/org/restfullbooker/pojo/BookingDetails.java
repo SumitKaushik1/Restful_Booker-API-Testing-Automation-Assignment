@@ -15,6 +15,9 @@ public class BookingDetails {
 
     }
 
+    public BookingDetails(String firstname){
+        this.firstname=firstname;
+    }
 
     public BookingDetails(String firstName, String lastName, int totalPrice, boolean depositePaid, BookingDates bookingDates, String additionalneeds) {
         this.firstname = firstName;
@@ -25,20 +28,20 @@ public class BookingDetails {
         this.additionalneeds = additionalneeds;
     }
 
-    public void getFirstName(String firstName){
-        this.firstname=firstname;
+    public String getFirstName(){
+       return  this.firstname;
     }
 
-    public void getLastName(String lastName){
-        this.lastname=lastname;
+    public String  getLastName(){
+        return this.lastname;
     }
 
-    public void getTotalPrice(int totalPrice){
-        this.totalprice=totalprice;
+    public int getTotalPrice(){
+       return this.totalprice;
     }
 
-    public void getDepositePaid(boolean depositePaid){
-        this.depositpaid=depositpaid;
+    public boolean getDepositePaid(){
+        return this.depositpaid;
     }
 
     public boolean isDepositePaid() {
