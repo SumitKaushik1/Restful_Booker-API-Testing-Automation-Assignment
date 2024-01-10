@@ -5,12 +5,10 @@ import com.google.gson.Gson;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
-import org.restfullbooker.pojo.BookingDetails;
+import org.restfullbooker.pojorequest.BookingDetails;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.requestSpecification;
 import static org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases.token;
 
 

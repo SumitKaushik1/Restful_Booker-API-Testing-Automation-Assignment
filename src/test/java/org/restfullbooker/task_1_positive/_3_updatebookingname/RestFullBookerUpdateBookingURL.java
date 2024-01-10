@@ -7,9 +7,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import net.minidev.json.JSONObject;
-import org.restfullbooker.pojo.BookingDetails;
 
-import static org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases.token;
 import static org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases.bookingidToUpdate;
 
 public class RestFullBookerUpdateBookingURL {

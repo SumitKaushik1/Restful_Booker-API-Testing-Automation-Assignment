@@ -5,7 +5,7 @@ import com.google.gson.Gson;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.restfullbooker.pojo.Customer;
+import org.restfullbooker.pojorequest.Customer;
 
 import static io.restassured.RestAssured.given;
 

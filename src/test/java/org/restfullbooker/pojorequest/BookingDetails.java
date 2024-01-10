@@ -1,4 +1,4 @@
-package org.restfullbooker.pojo;
+package org.restfullbooker.pojorequest;
 
 public class BookingDetails {
     private String firstname;

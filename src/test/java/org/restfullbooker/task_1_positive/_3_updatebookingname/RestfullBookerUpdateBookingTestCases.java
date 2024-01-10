@@ -95,6 +95,8 @@ public class RestfullBookerUpdateBookingTestCases {
         // "token" :"1343434", value in double quotes so it is string only ,now left side "12334" comes,right side
         // ,there is with Matcher object that it gives signal that it must not be the null value
         // equivalent to $.token
+
+       // MatcherAssert.assertThat(response.asPrettyString(), hasJsonPath("$.bookingId"));
         MatcherAssert.assertThat(response.getBody().jsonPath().getString("firstname"),Matchers.notNullValue());
     }
 

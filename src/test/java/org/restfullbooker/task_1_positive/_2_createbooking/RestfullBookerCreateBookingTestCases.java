@@ -1,6 +1,7 @@
 package org.restfullbooker.task_1_positive._2_createbooking;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.google.gson.Gson;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
@@ -8,12 +9,17 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
+import net.minidev.json.JSONObject;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
+import org.restfullbooker.pojoresponse.BookingDetailsResponse;
+import org.restfullbooker.pojoresponse.Token;
 import org.restfullbooker.task_1_positive._1_createtoken.RestFullBookerRequestTokenURL;
 import org.testng.annotations.Test;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 
 import static org.restfullbooker.task_1_positive._2_createbooking.RestFullBookerRequestBookingURL.request;
 
@@ -23,6 +29,42 @@ public class RestfullBookerCreateBookingTestCases {
 
 
     public static String  bookingidToUpdate;
+
+
+    @Test
+    void  resfullBoookerResponseContainBookingId() throws JsonProcessingException {
+
+        Response response =request();
+        //3. (by content ype you get-> true),true since both true matched so assertion is passed
+        // Assume you have a method that returns a response string
+        // Replace this with the actual method or API call that returns your response
+
+        Gson gson=new Gson();
+
+        //convert the response to class
+        BookingDetailsResponse bookingDetailsResponse=gson.fromJson(response.asPrettyString(), BookingDetailsResponse.class);
+        //asPreety string comes in the json format string easy to convert into the object
+        System.out.println("mybookingDetailsResponse"+bookingDetailsResponse.toString());
+
+      /*  //since the jasonRespone takes only teh map so map is made with object
+        Map<String,Object> map=new HashMap<>();
+        map.put("token",token);
+
+        // Parse the response string into a JSONObject
+        //we can check each key and value fo teh reespone (in jason format ) using this
+        JSONObject jsonResponse = new JSONObject(map);
+
+        // Check if the JSONObject contains the "token" key
+        MatcherAssert.assertThat(jsonResponse.containsKey("token"), Matchers.is(true));
+*/
+    }
+
+
+
+
+
+
+
     @Test
     void  resfullBookerCreateBookingStatusOk() throws JsonProcessingException {
 
@@ -106,10 +148,5 @@ public class RestfullBookerCreateBookingTestCases {
         // equivalent to $.token
         MatcherAssert.assertThat(response.getBody().jsonPath().getString("bookingid"),Matchers.notNullValue());
     }
-
-
-
-
-
 
 }

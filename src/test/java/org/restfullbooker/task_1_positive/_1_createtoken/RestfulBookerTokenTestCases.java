@@ -1,6 +1,8 @@
 package org.restfullbooker.task_1_positive._1_createtoken;
 
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
@@ -8,16 +10,22 @@ import io.restassured.response.Response;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.ValidatableResponse;
 
+import net.minidev.json.JSONObject;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
+import org.restfullbooker.pojoresponse.Token;
 import org.testng.annotations.Test;
 
 
 
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
+
+import static org.hamcrest.Matchers.is;
 import static org.restfullbooker.task_1_positive._1_createtoken.RestFullBookerRequestTokenURL.request;
 
   /*
@@ -203,18 +211,54 @@ test case>100
 
 
 
-
-
-
-
-
-
-
 public class RestfulBookerTokenTestCases {
     //@Test is the annotation which tells the metadata to compiler that compiler use to show further ui on the console after result
     // to testng file that these are test cases of testng
    public  static  String token;
-                 @Test
+
+
+    @Test
+    void  resfullBoookerResponseIsThere(){
+
+        Response response = request();
+        //3. (by content ype you get-> true),true since both true matched so assertion is passed
+        MatcherAssert.assertThat(response.getBody().asPrettyString(),Matchers.notNullValue());
+
+    }
+
+    @Test
+    void  resfullBoookerResponseContainToken(){
+
+        Response response = request();
+        //3. (by content ype you get-> true),true since both true matched so assertion is passed
+        // Assume you have a method that returns a response string
+        // Replace this with the actual method or API call that returns your response
+
+         Gson gson=new Gson();
+
+         //convert the response to class
+         Token token=gson.fromJson(response.asPrettyString(),Token.class);
+         //asPreety string comes in the json format string easy to convert into the object
+        System.out.println("myToken"+token);
+
+        //since the jasonRespone takes only teh map so map is made with object
+        Map<String,Object> map=new HashMap<>();
+        map.put("token",token);
+
+        // Parse the response string into a JSONObject
+        //we can check each key and value fo teh reespone (in jason format ) using this
+        JSONObject jsonResponse = new JSONObject(map);
+
+        // Check if the JSONObject contains the "token" key
+        MatcherAssert.assertThat(jsonResponse.containsKey("token"), Matchers.is(true));
+
+    }
+
+
+
+
+
+    @Test
     void  resfullBoookerTokenStatusOk(){
 
                Response response= request();
@@ -327,10 +371,7 @@ public class RestfulBookerTokenTestCases {
                     validatableResponse.assertThat()
                             .body(JsonSchemaValidator.
                                     matchesJsonSchema(new File("src/test/java/resource/task1/schema.json")));
-
-
-
-                }
+                 }
 
 
 
