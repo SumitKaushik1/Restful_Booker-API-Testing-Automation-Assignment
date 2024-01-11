@@ -21,7 +21,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.restfullbooker.task_1_positive._2_createbooking.RestFullBookerRequestBookingURL.RestFullBookerRequestBookingURL;
+import static org.restfullbooker.task_1_positive._2_createbooking.RestFullBookerRequestBookingURL.restFullBookerRequestBookingURL;
 
 
 public class RestfullBookerCreateBookingTestCases {
@@ -29,12 +29,13 @@ public class RestfullBookerCreateBookingTestCases {
 
 
     public static String  bookingidToUpdate;
+    public static String deletedbookingid;
 
 
     @Test
     void  resfullBookerResponseContainBookingId() throws JsonProcessingException {
 
-        Response response =RestFullBookerRequestBookingURL();
+        Response response =restFullBookerRequestBookingURL();
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         // Assume you have a method that returns a response string
         // Replace this with the actual method or API call that returns your response
@@ -68,7 +69,7 @@ public class RestfullBookerCreateBookingTestCases {
     @Test
     void  resfullBookerCreateBookingStatusOk() throws JsonProcessingException {
 
-        Response response= RestFullBookerRequestBookingURL();
+        Response response= restFullBookerRequestBookingURL();
 
 
         MatcherAssert.assertThat(response.getStatusCode(), Matchers.is(200));
@@ -79,7 +80,7 @@ public class RestfullBookerCreateBookingTestCases {
     @Test
     void  resfullBookerCreateBokingHeaderContentType() throws JsonProcessingException {
 
-        Response response = RestFullBookerRequestBookingURL();
+        Response response = restFullBookerRequestBookingURL();
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         System.out.println(response.getHeaders().toString());
         MatcherAssert.assertThat(String.valueOf(response.getHeaders().hasHeaderWithName("Content-type")), true);
@@ -94,7 +95,7 @@ public class RestfullBookerCreateBookingTestCases {
     @Test
     void  resfullBookerTokenBodyJsonSchema() throws JsonProcessingException {
 
-        Response response = RestFullBookerRequestBookingURL();
+        Response response = restFullBookerRequestBookingURL();
         //1 to 4 ,all request was made till "when"  ie so upto when hamcrest liberary can be used for the validation the response
 
         //5. in this then() has to used which return the implementation class of validation reponse which  can help easily to validate the schema
@@ -118,7 +119,7 @@ public class RestfullBookerCreateBookingTestCases {
 
 
 
-        Response response = RestFullBookerRequestBookingURL();
+        Response response = restFullBookerRequestBookingURL();
 
         //  System.out.println(response1.asString());
         //it means with jasonpath you can get the values of response body and
@@ -126,7 +127,9 @@ public class RestfullBookerCreateBookingTestCases {
 
         //2. to get value from the response use the jsonpath
         JsonPath jsonPath = new JsonPath(response.asString());
-        bookingidToUpdate=jsonPath.getString("bookingid");
+        deletedbookingid=bookingidToUpdate=jsonPath.getString("bookingid");
+        //a=b=c;
+       // means right to left ie b=c,a=b
 
         //static variable withing a class can be accessed
         System.out.println(bookingidToUpdate);//$.bookingid ->jasonpath

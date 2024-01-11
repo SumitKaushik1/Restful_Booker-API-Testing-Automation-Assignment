@@ -71,7 +71,7 @@ public class RestFullBookerRequestBookingURL {
 
 
 
-    static  Response RestFullBookerRequestBookingURL() throws JsonProcessingException{
+    static  Response restFullBookerRequestBookingURL() throws JsonProcessingException{
 
       /*  RequestSpecification requestSpecification= RestAssured.given();
         ValidatableResponse validatableResponse;

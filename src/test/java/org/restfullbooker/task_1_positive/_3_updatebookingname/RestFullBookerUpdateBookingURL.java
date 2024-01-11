@@ -12,7 +12,7 @@ import static org.restfullbooker.task_1_positive._2_createbooking.RestfullBooker
 
 public class RestFullBookerUpdateBookingURL {
 
-        static Response  RestFullBookerUpdateBookingURL() throws JsonProcessingException {
+        static Response  restFullBookerUpdateBookingURL() throws JsonProcessingException {
 
             JSONObject bookingDetails=new JSONObject();
             bookingDetails.put("firstname","James");

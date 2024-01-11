@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.given;
 
 public class RestFullBookerRequestTokenURL {
 
-    static  Response RestFullBookerRequestTokenURLRequest(){
+    static  Response restFullBookerRequestTokenURLRequest(){
             /* payload.setUsername("admin");
                      payload.setPassword("password123");*/
 
