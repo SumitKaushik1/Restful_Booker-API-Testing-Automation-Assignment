@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker"
+<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker/src/test/java/org/restfullbooker"
            tests="4"
            failures="0"
            errors="0"
            skipped="0"
-           time="13.836">
+           time="4.921">
     <properties></properties>
 
 
 
             <testcase
                 name="resfullBoookerUpdateBookingJsonSchema"
-                time="1.956"
+                time="1.198"
                 classname="org.restfullbooker.task_1_positive._3_updatebookingname.RestfullBookerUpdateBookingTestCases">
             </testcase>
             <testcase
-                name="resfullBookerUpdateBookingfirstName"
-                time="1.214"
+                name="resfullBookerUpdataBookingFirstName"
+                time="1.212"
                 classname="org.restfullbooker.task_1_positive._3_updatebookingname.RestfullBookerUpdateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerUpdateBookingStatusOk"
-                time="9.461"
+                time="1.259"
                 classname="org.restfullbooker.task_1_positive._3_updatebookingname.RestfullBookerUpdateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBoookerUpdateBokingHeaderContentType"
-                time="1.205"
+                time="1.252"
                 classname="org.restfullbooker.task_1_positive._3_updatebookingname.RestfullBookerUpdateBookingTestCases">
             </testcase>
 </testsuite>

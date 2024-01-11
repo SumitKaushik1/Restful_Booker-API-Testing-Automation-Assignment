@@ -1,5 +1,6 @@
 package org.restfullbooker.task_1_positive._3_updatebookingname;
 
+import static org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases.bookingidToUpdate;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
@@ -13,13 +14,13 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 
-import static org.restfullbooker.task_1_positive._3_updatebookingname.RestFullBookerUpdateBookingURL.request;
+import static org.restfullbooker.task_1_positive._3_updatebookingname.RestFullBookerUpdateBookingURL.RestFullBookerUpdateBookingURL;
 
 public class RestfullBookerUpdateBookingTestCases {
     @Test
     void  resfullBookerUpdateBookingStatusOk() throws JsonProcessingException {
 
-        Response response= request();
+        Response response= RestFullBookerUpdateBookingURL();
 
 
         MatcherAssert.assertThat(response.getStatusCode(), Matchers.is(200));
@@ -29,7 +30,7 @@ public class RestfullBookerUpdateBookingTestCases {
     @Test
     void  resfullBoookerUpdateBokingHeaderContentType() throws JsonProcessingException {
 
-        Response response = request();
+        Response response = RestFullBookerUpdateBookingURL();
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         System.out.println(response.getHeaders().toString());
         MatcherAssert.assertThat(String.valueOf(response.getHeaders().hasHeaderWithName("Content-type")), true);
@@ -43,7 +44,7 @@ public class RestfullBookerUpdateBookingTestCases {
     @Test
     void  resfullBoookerUpdateBookingJsonSchema() throws JsonProcessingException {
 
-        Response response =request();
+        Response response =RestFullBookerUpdateBookingURL();
         //1 to 4 ,all request was made till "when"  ie so upto when hamcrest liberary can be used for the validation the response
 
         //5. in this then() has to used which return the implementation class of validation reponse which  can help easily to validate the schema
@@ -61,13 +62,17 @@ public class RestfullBookerUpdateBookingTestCases {
 
 
 
+
+
+
+
     @Test
-    void resfullBookerUpdateBookingfirstName () throws JsonProcessingException {
+    void resfullBookerUpdataBookingFirstName () throws JsonProcessingException {
 
 
 
 
-        Response response = request();
+        Response response = RestFullBookerUpdateBookingURL();
 
         //  System.out.println(response1.asString());
         //it means with jasonpath you can get the values of response body and
@@ -78,7 +83,7 @@ public class RestfullBookerUpdateBookingTestCases {
         String firstname=jsonPath.getString("firstname");
 
         //static variable withing a class can be accessed
-        System.out.println(firstname);//$.token ->jasonpath
+        System.out.println(firstname);//$.firstname ->jasonpath
 
         //MatcherAssert.assertThat(response.getHeaders(), hasKey("Content-Type"));
 
@@ -95,8 +100,6 @@ public class RestfullBookerUpdateBookingTestCases {
         // "token" :"1343434", value in double quotes so it is string only ,now left side "12334" comes,right side
         // ,there is with Matcher object that it gives signal that it must not be the null value
         // equivalent to $.token
-
-       // MatcherAssert.assertThat(response.asPrettyString(), hasJsonPath("$.bookingId"));
         MatcherAssert.assertThat(response.getBody().jsonPath().getString("firstname"),Matchers.notNullValue());
     }
 

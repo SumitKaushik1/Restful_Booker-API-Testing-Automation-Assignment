@@ -21,7 +21,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.restfullbooker.task_1_positive._2_createbooking.RestFullBookerRequestBookingURL.request;
+import static org.restfullbooker.task_1_positive._2_createbooking.RestFullBookerRequestBookingURL.RestFullBookerRequestBookingURL;
 
 
 public class RestfullBookerCreateBookingTestCases {
@@ -32,9 +32,9 @@ public class RestfullBookerCreateBookingTestCases {
 
 
     @Test
-    void  resfullBoookerResponseContainBookingId() throws JsonProcessingException {
+    void  resfullBookerResponseContainBookingId() throws JsonProcessingException {
 
-        Response response =request();
+        Response response =RestFullBookerRequestBookingURL();
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         // Assume you have a method that returns a response string
         // Replace this with the actual method or API call that returns your response
@@ -44,19 +44,19 @@ public class RestfullBookerCreateBookingTestCases {
         //convert the response to class
         BookingDetailsResponse bookingDetailsResponse=gson.fromJson(response.asPrettyString(), BookingDetailsResponse.class);
         //asPreety string comes in the json format string easy to convert into the object
-        System.out.println("mybookingDetailsResponse"+bookingDetailsResponse.toString());
+        System.out.println("mybookingDetailsResponse"+bookingDetailsResponse);
 
-      /*  //since the jasonRespone takes only teh map so map is made with object
+        //since the jasonRespone takes only teh map so map is made with object
         Map<String,Object> map=new HashMap<>();
-        map.put("token",token);
+        map.put("bookingid",bookingDetailsResponse.getBookingid());
 
         // Parse the response string into a JSONObject
         //we can check each key and value fo teh reespone (in jason format ) using this
         JSONObject jsonResponse = new JSONObject(map);
 
         // Check if the JSONObject contains the "token" key
-        MatcherAssert.assertThat(jsonResponse.containsKey("token"), Matchers.is(true));
-*/
+        MatcherAssert.assertThat(jsonResponse.containsKey("bookingid"), Matchers.is(true));
+
     }
 
 
@@ -68,7 +68,7 @@ public class RestfullBookerCreateBookingTestCases {
     @Test
     void  resfullBookerCreateBookingStatusOk() throws JsonProcessingException {
 
-        Response response= request();
+        Response response= RestFullBookerRequestBookingURL();
 
 
         MatcherAssert.assertThat(response.getStatusCode(), Matchers.is(200));
@@ -77,9 +77,9 @@ public class RestfullBookerCreateBookingTestCases {
 
 
     @Test
-    void  resfullBoookerCreateBokingHeaderContentType() throws JsonProcessingException {
+    void  resfullBookerCreateBokingHeaderContentType() throws JsonProcessingException {
 
-        Response response = request();
+        Response response = RestFullBookerRequestBookingURL();
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         System.out.println(response.getHeaders().toString());
         MatcherAssert.assertThat(String.valueOf(response.getHeaders().hasHeaderWithName("Content-type")), true);
@@ -92,9 +92,9 @@ public class RestfullBookerCreateBookingTestCases {
 
 
     @Test
-    void  resfullBoookerTokenBodyJsonSchema() throws JsonProcessingException {
+    void  resfullBookerTokenBodyJsonSchema() throws JsonProcessingException {
 
-        Response response = request();
+        Response response = RestFullBookerRequestBookingURL();
         //1 to 4 ,all request was made till "when"  ie so upto when hamcrest liberary can be used for the validation the response
 
         //5. in this then() has to used which return the implementation class of validation reponse which  can help easily to validate the schema
@@ -113,12 +113,12 @@ public class RestfullBookerCreateBookingTestCases {
 
 
     @Test
-    void resfullBoookerCreateBookingBookingId () throws JsonProcessingException {
+    void resfullBookerCreateBookingBookingId () throws JsonProcessingException {
 
 
 
 
-        Response response = request();
+        Response response = RestFullBookerRequestBookingURL();
 
         //  System.out.println(response1.asString());
         //it means with jasonpath you can get the values of response body and

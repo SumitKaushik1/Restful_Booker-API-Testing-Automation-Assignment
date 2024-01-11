@@ -26,7 +26,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 
 import static org.hamcrest.Matchers.is;
-import static org.restfullbooker.task_1_positive._1_createtoken.RestFullBookerRequestTokenURL.request;
+import static org.restfullbooker.task_1_positive._1_createtoken.RestFullBookerRequestTokenURL.RestFullBookerRequestTokenURLRequest;
 
   /*
                     Certainly! Let's compare the two provided code snippets, one following a BDD style and the other following a non-BDD style, focusing on their structure, readability, and use of natural language:
@@ -211,6 +211,13 @@ test case>100
 
 
 
+
+
+
+
+
+
+
 public class RestfulBookerTokenTestCases {
     //@Test is the annotation which tells the metadata to compiler that compiler use to show further ui on the console after result
     // to testng file that these are test cases of testng
@@ -220,7 +227,7 @@ public class RestfulBookerTokenTestCases {
     @Test
     void  resfullBoookerResponseIsThere(){
 
-        Response response = request();
+        Response response = RestFullBookerRequestTokenURLRequest();
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         MatcherAssert.assertThat(response.getBody().asPrettyString(),Matchers.notNullValue());
 
@@ -229,7 +236,7 @@ public class RestfulBookerTokenTestCases {
     @Test
     void  resfullBoookerResponseContainToken(){
 
-        Response response = request();
+        Response response = RestFullBookerRequestTokenURLRequest();
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         // Assume you have a method that returns a response string
         // Replace this with the actual method or API call that returns your response
@@ -237,7 +244,7 @@ public class RestfulBookerTokenTestCases {
          Gson gson=new Gson();
 
          //convert the response to class
-         Token token=gson.fromJson(response.asPrettyString(),Token.class);
+         Token token=gson.fromJson(response.asPrettyString(), Token.class);
          //asPreety string comes in the json format string easy to convert into the object
         System.out.println("myToken"+token);
 
@@ -261,7 +268,7 @@ public class RestfulBookerTokenTestCases {
     @Test
     void  resfullBoookerTokenStatusOk(){
 
-               Response response= request();
+               Response response= RestFullBookerRequestTokenURLRequest();
 
                 //1.
                  MatcherAssert.assertThat(response.getStatusCode(), Matchers.is(200));
@@ -312,7 +319,7 @@ public class RestfulBookerTokenTestCases {
                  @Test
                         void  resfullBoookerTokenHeaderContentType() {
 
-                         Response response = request();
+                         Response response = RestFullBookerRequestTokenURLRequest();
                          //3. (by content ype you get-> true),true since both true matched so assertion is passed
                          MatcherAssert.assertThat(String.valueOf(response.getHeaders().hasHeaderWithName("Content-type")), true);
 
@@ -325,7 +332,7 @@ public class RestfulBookerTokenTestCases {
 
 
 
-                         Response response = request();
+                         Response response = RestFullBookerRequestTokenURLRequest();
 
                          //  System.out.println(response1.asString());
                          //it means with jasonpath you can get the values of response body and
@@ -360,7 +367,7 @@ public class RestfulBookerTokenTestCases {
                 @Test
                 void  resfullBoookerTokenBodyJsonSchema() {
 
-                    Response response =request();
+                    Response response =RestFullBookerRequestTokenURLRequest();
                     //1 to 4 ,all request was made till "when"  ie so upto when hamcrest liberary can be used for the validation the response
 
                     //5. in this then() has to used which return the implementation class of validation reponse which  can help easily to validate the schema

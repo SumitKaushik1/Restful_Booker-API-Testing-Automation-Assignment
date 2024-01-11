@@ -12,7 +12,7 @@ import static org.restfullbooker.task_1_positive._2_createbooking.RestfullBooker
 
 public class RestFullBookerUpdateBookingURL {
 
-        static Response request() throws JsonProcessingException {
+        static Response  RestFullBookerUpdateBookingURL() throws JsonProcessingException {
 
             JSONObject bookingDetails=new JSONObject();
             bookingDetails.put("firstname","James");
@@ -33,7 +33,7 @@ public class RestFullBookerUpdateBookingURL {
             // ContentType is an ENUM.
             requestSpecification.contentType(ContentType.JSON);
            // requestSpecification.accept(ContentType.JSON);//header is set
-            //note bydefault the accept response is json no need to specify that otherwise it will give error
+            //note bydefault the accept header response is json no need to specify that otherwise it will give error
 
 
             //we can change the resource by two things
