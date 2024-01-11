@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="restfullbooker"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="16.120">
+    <properties></properties>
+
+
+
+            <testcase
+                name="resfullBoookerGetAllBokingHeaderContentType"
+                time="1.878"
+                classname="org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBoookerGetBookingJsonSchema"
+                time="3.322"
+                classname="org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBookerGetAllBookingStatusOk"
+                time="1.841"
+                classname="org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBookerGetAllBookingBookingId"
+                time="9.079"
+                classname="org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases">
+            </testcase>
+</testsuite>
