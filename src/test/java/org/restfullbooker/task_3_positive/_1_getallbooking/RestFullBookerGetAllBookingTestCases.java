@@ -17,6 +17,8 @@ import static org.restfullbooker.task_3_positive._1_getallbooking.RestfullBooker
 
 
 public class RestFullBookerGetAllBookingTestCases {
+
+    public static String bookingidToUpdate1;
     @Test
     void  resfullBookerGetAllBookingStatusOk() throws JsonProcessingException {
 
@@ -69,11 +71,11 @@ public class RestFullBookerGetAllBookingTestCases {
         // with hemcrest you can assert the values of response headers and the respone body,status code,
 
         //2. to get value from the response use the jsonpath
-    /*    JsonPath jsonPath = new JsonPath(response.asString());
-        String firstname=jsonPath.getString("firstname");
+        JsonPath jsonPath = new JsonPath(response.asString());
+         bookingidToUpdate1=jsonPath.getString("[0].bookingid");
 
         //static variable withing a class can be accessed
-        System.out.println(firstname);//$.token ->jasonpath
+        System.out.println(bookingidToUpdate1);//$.[0].bookingid ->jasonpath
 
         //MatcherAssert.assertThat(response.getHeaders(), hasKey("Content-Type"));
 
@@ -85,7 +87,7 @@ public class RestFullBookerGetAllBookingTestCases {
 
 
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
-        //4.*/
+        //4.
         System.out.println(response.asPrettyString());
         // "token" :"1343434", value in double quotes so it is string only ,now left side "12334" comes,right side
         // ,there is with Matcher object that it gives signal that it must not be the null value

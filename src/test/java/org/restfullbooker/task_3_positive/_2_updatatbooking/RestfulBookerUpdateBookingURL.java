@@ -1,4 +1,4 @@
-package org.restfullbooker.task_1_positive._3_updatebookingname;
+package org.restfullbooker.task_3_positive._2_updatatbooking;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gson.Gson;
@@ -7,42 +7,56 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import net.minidev.json.JSONObject;
-
-import static org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases.bookingidToUpdate;
-
-public class RestFullBookerUpdateBookingURL {
-
-        public static Response  restFullBookerUpdateBookingURL() throws JsonProcessingException {
-
-            JSONObject bookingDetails=new JSONObject();
-            bookingDetails.put("firstname","James");
-            //BookingDetails bookingDetails=new BookingDetails("James");
-            //directly passing the object to body
-            //when two clases closely packed so no need to creat the inner class as the seperate classs and try to import
-            // instead make it as the inner nested  class and and you can save a one .java file
+import org.restfullbooker.pojorequest.BookingDetails;
 
 
-            //giving me error so we has to change the suitable string using the Gson then pass to the body of response
-            Gson gson=new Gson();
-            String payload= gson.toJson(bookingDetails);
-            System.out.println(payload);
+import static org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases.bookingidToUpdate1;
+
+public class RestfulBookerUpdateBookingURL {
+    static Response restFullBookerUpdateBookingURL() throws JsonProcessingException {
+
+        //JSONObject bookingDetails=new JSONObject();
+       // bookingDetails.put("firstname","James");
+        //BookingDetails bookingDetails=new BookingDetails("James");
+        //directly passing the object to body
+        //when two clases closely packed so no need to creat the inner class as the seperate classs and try to import
+        // instead make it as the inner nested  class and and you can save a one .java file
 
 
-            RequestSpecification requestSpecification= RestAssured.given();
-            // Setting content type to specify format in which request payload will be sent.
-            // ContentType is an ENUM.
-            requestSpecification.contentType(ContentType.JSON);
-           // requestSpecification.accept(ContentType.JSON);//header is set
-            //note bydefault the accept header response is json no need to specify that otherwise it will give error
+        // since booking deatils must have two types of constructor one is the non-parameterized for the 30 line and
+        // paramterized for the 31 th line
+
+        //when inner nested class is made to avoid making seperate class we can access by it
+        BookingDetails.BookingDates bookingDates=new BookingDetails().new BookingDates("2018-01-01","2019-01-01");
+
+        //  BookingDates bookingDates= new BookingDates("2018-01-01","2019-01-01");//when seperate bookingDates class is made
+        BookingDetails bookingDetails=new BookingDetails("sumit","Brown",111,true,bookingDates,"Breakfast");
+        //directly passing the object to body
+        //when two clases closely packed so no need to create the inner class as the seperate classs and try to import
+        // instead make it as the inner nested  class and and you can save a one .java file
 
 
-            //we can change the resource by two things
-            //1. either we should have the token by supplying the username and password
-            //2. we have to directly use the basic authorization by supplying the username and passowrd
-            //System.out.println(token);
-          // requestSpecification.cookie(token);
+        //giving me error so we has to change the suitable string using the Gson then pass to the body of response
+        Gson gson=new Gson();
+        String payload= gson.toJson(bookingDetails);
+        System.out.println("mypayload"+payload);
 
-            requestSpecification.auth().preemptive().basic("admin","password123");
+
+        RequestSpecification requestSpecification= RestAssured.given();
+        // Setting content type to specify format in which request payload will be sent.
+        // ContentType is an ENUM.
+        requestSpecification.contentType(ContentType.JSON);
+        // requestSpecification.accept(ContentType.JSON);//header is set
+        //note bydefault the accept header response is json no need to specify that otherwise it will give error
+
+
+        //we can change the resource by two things
+        //1. either we should have the token by supplying the username and password
+        //2. we have to directly use the basic authorization by supplying the username and passowrd
+        //System.out.println(token);
+        // requestSpecification.cookie(token);
+
+        requestSpecification.auth().preemptive().basic("admin","password123");
 
              /*
 
@@ -119,23 +133,22 @@ public class RestFullBookerUpdateBookingURL {
 
 
 
-            // Adding URI
-            requestSpecification.baseUri("https://restful-booker.herokuapp.com");
-            System.out.println(bookingidToUpdate);
-            requestSpecification.basePath("/booking/"+bookingidToUpdate);
+        // Adding URI
+        requestSpecification.baseUri("https://restful-booker.herokuapp.com");
+        System.out.println("mybooking id"+bookingidToUpdate1);
+        requestSpecification.basePath("/booking/"+bookingidToUpdate1);
 
-            // Adding body as string
-            requestSpecification.body(payload);
+        // Adding body as string
+        requestSpecification.body(payload);
 
-            Response response = requestSpecification.patch();
-            // Printing Response as string
-            System.out.println(response.asString());
+        Response response = requestSpecification.put();
+        // Printing Response as string
+        System.out.println("my response"+response.asString());
 
-            return response;
+        return response;
 
 
-        }
-
+    }
 
 
 
