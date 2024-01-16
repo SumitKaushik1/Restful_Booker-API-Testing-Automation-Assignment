@@ -1,16 +1,13 @@
-package org.restfullbooker.task_2_positive._1_deleteuser;
+package org.restfullbooker.task_4_positive._2_deletebookingid;
 
-import com.google.gson.Gson;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.restfullbooker.pojorequest.Customer;
 
 import static io.restassured.RestAssured.given;
-import static org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases.deletedbookingid;
-
+import static org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases.deletedbookingid;
 public class RestfullBookerRequestDeleteUserURL {
-    public static Response restfullBookerRequestDeleteUserURLRequest(){
+    static Response restfullBookerRequestDeleteUserURLRequest(){
             /* payload.setUsername("admin");
                      payload.setPassword("password123");*/
 

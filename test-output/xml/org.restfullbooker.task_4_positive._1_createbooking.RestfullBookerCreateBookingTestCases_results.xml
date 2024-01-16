@@ -4,34 +4,34 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="6.747">
+           time="6.024">
     <properties></properties>
 
 
 
             <testcase
-                name="resfullBookerCreateBookingBookingId"
-                time="1.477"
-                classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
-            </testcase>
-            <testcase
                 name="resfullBookerTokenBodyJsonSchema"
-                time="1.382"
-                classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
-            </testcase>
-            <testcase
-                name="resfullBookerCreateBookingStatusOk"
-                time="1.227"
+                time="1.165"
                 classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerCreateBokingHeaderContentType"
-                time="1.382"
+                time="1.219"
+                classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBookerCreateBookingStatusOk"
+                time="1.172"
+                classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBookerCreateBookingBookingId"
+                time="1.251"
                 classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerResponseContainBookingId"
-                time="1.279"
+                time="1.217"
                 classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
 </testsuite>

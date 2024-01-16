@@ -23,7 +23,7 @@ public class RestfullBookerCreateBookingTestCases {
 
 
 
-    public static String  bookingidToUpdate;
+
     public static String deletedbookingid;
 
 
@@ -122,12 +122,12 @@ public class RestfullBookerCreateBookingTestCases {
 
         //2. to get value from the response use the jsonpath
         JsonPath jsonPath = new JsonPath(response.asString());
-        deletedbookingid=bookingidToUpdate=jsonPath.getString("bookingid");
+        deletedbookingid=jsonPath.getString("bookingid");
         //a=b=c;
        // means right to left ie b=c,a=b
 
         //static variable withing a class can be accessed
-        System.out.println(bookingidToUpdate);//$.bookingid ->jasonpath
+        //System.out.println(bookingidToUpdate);//$.bookingid ->jasonpath
 
         //MatcherAssert.assertThat(response.getHeaders(), hasKey("Content-Type"));
 
