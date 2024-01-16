@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker/src/test/java/org/restfullbooker/task_1_positive"
+<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker/src/test/java/org/restfullbooker"
            tests="5"
            failures="0"
            errors="0"
            skipped="0"
-           time="6.118">
+           time="6.622">
     <properties></properties>
 
 
 
             <testcase
                 name="resfullBookerCreateBookingBookingId"
-                time="1.217"
+                time="1.311"
                 classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerTokenBodyJsonSchema"
-                time="1.235"
-                classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
-            </testcase>
-            <testcase
-                name="resfullBookerResponseContainBookingId"
-                time="1.284"
+                time="1.297"
                 classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerCreateBokingHeaderContentType"
-                time="1.225"
+                time="1.346"
+                classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBookerResponseContainBookingId"
+                time="1.459"
                 classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerCreateBookingStatusOk"
-                time="1.157"
+                time="1.209"
                 classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
 </testsuite>

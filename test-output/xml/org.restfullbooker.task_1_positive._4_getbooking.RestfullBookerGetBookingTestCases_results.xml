@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker/src/test/java/org/restfullbooker/task_1_positive"
+<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker/src/test/java/org/restfullbooker"
            tests="4"
            failures="0"
            errors="0"
            skipped="0"
-           time="4.726">
+           time="5.056">
     <properties></properties>
 
 
 
             <testcase
-                name="resfullBookerGetBookingStatusOk"
-                time="1.178"
-                classname="org.restfullbooker.task_1_positive._4_getbooking.RestfullBookerGetBookingTestCases">
-            </testcase>
-            <testcase
-                name="resfullBoookerGetBookingJsonSchema"
-                time="1.221"
+                name="resfullBookerGetBookingfirstName"
+                time="1.265"
                 classname="org.restfullbooker.task_1_positive._4_getbooking.RestfullBookerGetBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBoookerGetBokingHeaderContentType"
-                time="1.145"
+                time="1.212"
                 classname="org.restfullbooker.task_1_positive._4_getbooking.RestfullBookerGetBookingTestCases">
             </testcase>
             <testcase
-                name="resfullBookerGetBookingfirstName"
-                time="1.182"
+                name="resfullBoookerGetBookingJsonSchema"
+                time="1.297"
+                classname="org.restfullbooker.task_1_positive._4_getbooking.RestfullBookerGetBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBookerGetBookingStatusOk"
+                time="1.282"
                 classname="org.restfullbooker.task_1_positive._4_getbooking.RestfullBookerGetBookingTestCases">
             </testcase>
 </testsuite>
