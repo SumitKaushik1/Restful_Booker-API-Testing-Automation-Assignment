@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker/src/test/java/org/restfullbooker"
+           tests="6"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="7.585">
+    <properties></properties>
+
+
+
+            <testcase
+                name="resfullBoookerTokenBodyToken"
+                time="1.290"
+                classname="org.restfullbooker.task_5_positive._1_createtoken.RestfulBookerTokenTestCases">
+            </testcase>
+            <testcase
+                name="resfullBoookerTokenHeaderContentType"
+                time="1.219"
+                classname="org.restfullbooker.task_5_positive._1_createtoken.RestfulBookerTokenTestCases">
+            </testcase>
+            <testcase
+                name="resfullBoookerResponseContainToken"
+                time="1.216"
+                classname="org.restfullbooker.task_5_positive._1_createtoken.RestfulBookerTokenTestCases">
+            </testcase>
+            <testcase
+                name="resfullBoookerTokenStatusOk"
+                time="1.267"
+                classname="org.restfullbooker.task_5_positive._1_createtoken.RestfulBookerTokenTestCases">
+            </testcase>
+            <testcase
+                name="resfullBoookerTokenBodyJsonSchema"
+                time="1.138"
+                classname="org.restfullbooker.task_5_positive._1_createtoken.RestfulBookerTokenTestCases">
+            </testcase>
+            <testcase
+                name="resfullBoookerResponseIsThere"
+                time="1.455"
+                classname="org.restfullbooker.task_5_positive._1_createtoken.RestfulBookerTokenTestCases">
+            </testcase>
+</testsuite>
