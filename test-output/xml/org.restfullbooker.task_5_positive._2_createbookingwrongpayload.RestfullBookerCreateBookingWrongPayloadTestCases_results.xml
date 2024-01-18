@@ -12,6 +12,6 @@
             <testcase
                 name="resfullBookerCreateBookingStatusOk"
                 time="1.243"
-                classname="org.restfullbooker.task_5_positive._2_createbookingwrongpayload.RestfullBookerCreateBookingWrongPayloadTestCases">
+                classname="org.restfullbooker.task_5_negative._2_createbookingwrongpayload.RestfullBookerCreateBookingWrongPayloadTestCases">
             </testcase>
 </testsuite>

@@ -64,7 +64,7 @@ public class RestFullBookerUpdateBookingTestCases {
 
         // MatcherAssert.assertThat(response.asPrettyString(), hasJsonPath("$.bookingId"));
         // MatcherAssert.assertThat(response.getBody().jsonPath().getString("firstname"),Matchers.notNullValue());
-        MatcherAssert.assertThat(String.valueOf(response.asPrettyString().contains("firstname")),true);
+        MatcherAssert.assertThat(response.asPrettyString().contains("firstname"),Matchers.is(true));
     }
 
 
@@ -75,7 +75,7 @@ public class RestFullBookerUpdateBookingTestCases {
         Response response = restFullBookerUpdateBookingURL();
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         System.out.println(response.getHeaders().toString());
-        MatcherAssert.assertThat(String.valueOf(response.getHeaders().hasHeaderWithName("Content-type")), true);
+        MatcherAssert.assertThat(response.getHeaders().hasHeaderWithName("Content-type"),Matchers.is(true));
 
     }
 

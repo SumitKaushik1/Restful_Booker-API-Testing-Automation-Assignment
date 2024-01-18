@@ -4,12 +4,12 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="2.407">
+           time="2.540">
     <properties></properties>
 
             <testcase
                 name="restBookerRequestDeleteUserStatusOk"
-                time="1.253"
+                time="1.233"
                 classname="org.restfullbooker.task_2_positive._1_deleteuser.RestBookerRequestDeleteUserTestCases">
 
             <failure type="java.lang.AssertionError" message="
@@ -26,7 +26,7 @@ Expected: is <204>
 
             <testcase
                 name="restBookerRequestDeleteUserContentType"
-                time="1.154"
+                time="1.307"
                 classname="org.restfullbooker.task_2_positive._1_deleteuser.RestBookerRequestDeleteUserTestCases">
             </testcase>
 </testsuite>

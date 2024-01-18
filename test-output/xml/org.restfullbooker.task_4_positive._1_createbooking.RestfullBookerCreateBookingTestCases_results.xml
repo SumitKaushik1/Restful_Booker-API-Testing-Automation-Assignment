@@ -4,34 +4,34 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="6.248">
+           time="6.438">
     <properties></properties>
 
 
 
             <testcase
-                name="resfullBookerTokenBodyJsonSchema"
-                time="1.320"
-                classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
-            </testcase>
-            <testcase
-                name="resfullBookerCreateBookingStatusOk"
-                time="1.205"
+                name="resfullBookerCreateBookingBookingId"
+                time="1.208"
                 classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerResponseContainBookingId"
-                time="1.215"
-                classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
-            </testcase>
-            <testcase
-                name="resfullBookerCreateBookingBookingId"
-                time="1.296"
+                time="1.662"
                 classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerCreateBokingHeaderContentType"
-                time="1.212"
+                time="1.141"
+                classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBookerTokenBodyJsonSchema"
+                time="1.293"
+                classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBookerCreateBookingStatusOk"
+                time="1.134"
                 classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
 </testsuite>

@@ -32,7 +32,7 @@ public class RestfullBookerGetBookingTestCases {
         Response response = restfullBookerGetBookingURL();
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         System.out.println(response.getHeaders().toString());
-        MatcherAssert.assertThat(String.valueOf(response.getHeaders().hasHeaderWithName("Content-type")), true);
+        MatcherAssert.assertThat(response.getHeaders().hasHeaderWithName("Content-type"),Matchers.is( true));
 
     }
 
@@ -54,7 +54,7 @@ public class RestfullBookerGetBookingTestCases {
         String firstname=jsonPath.getString("firstname");
 
         //static variable withing a class can be accessed
-        System.out.println(firstname);//$.token ->jasonpath
+        System.out.println("firstname"+firstname);//$.token ->jasonpath
 
         //MatcherAssert.assertThat(response.getHeaders(), hasKey("Content-Type"));
 

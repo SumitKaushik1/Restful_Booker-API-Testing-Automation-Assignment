@@ -321,7 +321,7 @@ public class RestfulBookerTokenTestCases {
 
                          Response response = restFullBookerRequestTokenURLRequest();
                          //3. (by content ype you get-> true),true since both true matched so assertion is passed
-                         MatcherAssert.assertThat(String.valueOf(response.getHeaders().hasHeaderWithName("Content-type")), true);
+                         MatcherAssert.assertThat(response.getHeaders().hasHeaderWithName("Content-type"),Matchers.is( true));
 
                      }
 
