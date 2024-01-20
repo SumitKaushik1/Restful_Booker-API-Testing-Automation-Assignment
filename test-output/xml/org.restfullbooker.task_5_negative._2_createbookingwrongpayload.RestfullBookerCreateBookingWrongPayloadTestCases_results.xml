@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.169">
+           time="1.278">
     <properties></properties>
 
 
 
             <testcase
                 name="resfullBookerCreateBookingStatusOk"
-                time="1.169"
+                time="1.278"
                 classname="org.restfullbooker.task_5_negative._2_createbookingwrongpayload.RestfullBookerCreateBookingWrongPayloadTestCases">
             </testcase>
 </testsuite>
