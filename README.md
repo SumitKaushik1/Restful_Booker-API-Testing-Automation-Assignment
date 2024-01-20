@@ -1,5 +1,5 @@
 # Automation-Testing-Assignment
-Automation-Practice
+
 Tech Stack
 Java
 TestNG, Maven
