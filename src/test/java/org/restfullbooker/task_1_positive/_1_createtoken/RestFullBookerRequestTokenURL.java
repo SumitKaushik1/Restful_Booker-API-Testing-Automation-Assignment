@@ -8,8 +8,11 @@ import io.restassured.specification.RequestSpecification;
 import org.restfullbooker.pojorequest.Customer;
 
 import static io.restassured.RestAssured.given;
+import static org.restfullbooker.APIConstants.*;
 
 public class RestFullBookerRequestTokenURL {
+
+    public static final Response response=restFullBookerRequestTokenURLRequest();
 
     static  Response restFullBookerRequestTokenURLRequest(){
             /* payload.setUsername("admin");
@@ -34,8 +37,8 @@ public class RestFullBookerRequestTokenURL {
         RequestSpecification requestSpecification= given();
 
 
-        requestSpecification.baseUri("https://restful-booker.herokuapp.com");
-        requestSpecification.basePath("/auth");
+        requestSpecification.baseUri(BASE_URI);
+        requestSpecification.basePath(BASE_PATH_TOKEN);
         requestSpecification.contentType(ContentType.JSON);//header is set
         requestSpecification.body(payload);//it will set as the class for payload (no map and string )
         // , class for more than 150 test case
