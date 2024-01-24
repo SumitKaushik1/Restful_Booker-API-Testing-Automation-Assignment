@@ -12,7 +12,16 @@ import static org.restfullbooker.APIConstants.*;
 
 public class RestFullBookerRequestTokenURL {
 
-    public static final Response response=restFullBookerRequestTokenURLRequest();
+// when the RestfulBookerTokenTestCase clas is need the response firstly the RestFullBookerRequestTokenURL class is loadeed
+    //then all the static variables is loaded it meaans the methods is called auto maticlaly
+    public static final Response response;
+
+
+    //it is the good practice to intialize the static variable in the static block (in this you can intialize the final variable also
+    // otherwise without static block  you have to intialize the static variable in same line where it is decalared )
+    static{
+        response=restFullBookerRequestTokenURLRequest();
+    }
 
     static  Response restFullBookerRequestTokenURLRequest(){
             /* payload.setUsername("admin");

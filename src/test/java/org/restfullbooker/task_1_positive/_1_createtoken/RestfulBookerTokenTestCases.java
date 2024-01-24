@@ -227,7 +227,8 @@ public class RestfulBookerTokenTestCases {
     @Test
     void  resfullBoookerResponseIsThere(){
 
-        Response response = restFullBookerRequestTokenURLRequest();
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response = RestFullBookerRequestTokenURL.response;
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         MatcherAssert.assertThat(response.getBody().asPrettyString(),Matchers.notNullValue());
 
@@ -236,7 +237,8 @@ public class RestfulBookerTokenTestCases {
     @Test
     void  resfullBoookerResponseContainToken(){
 
-        Response response = restFullBookerRequestTokenURLRequest();
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response = RestFullBookerRequestTokenURL.response;
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         // Assume you have a method that returns a response string
         // Replace this with the actual method or API call that returns your response
@@ -268,7 +270,8 @@ public class RestfulBookerTokenTestCases {
     @Test
     void  resfullBoookerTokenStatusOk(){
 
-               Response response= restFullBookerRequestTokenURLRequest();
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response = RestFullBookerRequestTokenURL.response;
 
                 //1.
                  MatcherAssert.assertThat(response.getStatusCode(), Matchers.is(200));
@@ -319,7 +322,8 @@ public class RestfulBookerTokenTestCases {
                  @Test
                         void  resfullBoookerTokenHeaderContentType() {
 
-                         Response response = restFullBookerRequestTokenURLRequest();
+                     // calling method will take time so directly teh value fo final static method will save time while calling
+                     Response response = RestFullBookerRequestTokenURL.response;
                          //3. (by content ype you get-> true),true since both true matched so assertion is passed
                          MatcherAssert.assertThat(response.getHeaders().hasHeaderWithName("Content-type"),Matchers.is( true));
 
@@ -330,9 +334,8 @@ public class RestfulBookerTokenTestCases {
                      void resfullBoookerTokenBodyToken () {
 
 
-
-
-                         Response response = restFullBookerRequestTokenURLRequest();
+                         // calling method will take time so directly teh value fo final static method will save time while calling
+                         Response response = RestFullBookerRequestTokenURL.response;
 
                          //  System.out.println(response1.asString());
                          //it means with jasonpath you can get the values of response body and
@@ -367,7 +370,8 @@ public class RestfulBookerTokenTestCases {
                 @Test
                 void  resfullBoookerTokenBodyJsonSchema() {
 
-                    Response response =restFullBookerRequestTokenURLRequest();
+                    // calling method will take time so directly teh value fo final static method will save time while calling
+                    Response response = RestFullBookerRequestTokenURL.response;
                     //1 to 4 ,all request was made till "when"  ie so upto when hamcrest liberary can be used for the validation the response
 
                     //5. in this then() has to used which return the implementation class of validation reponse which  can help easily to validate the schema

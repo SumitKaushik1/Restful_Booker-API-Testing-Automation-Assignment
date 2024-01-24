@@ -20,7 +20,8 @@ public class RestfullBookerUpdateBookingTestCases {
     @Test
     void  resfullBookerUpdateBookingStatusOk() throws JsonProcessingException {
 
-        Response response= restFullBookerUpdateBookingURL();
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response= RestFullBookerUpdateBookingURL.response;
 
 
         MatcherAssert.assertThat(response.getStatusCode(), Matchers.is(200));
@@ -30,7 +31,9 @@ public class RestfullBookerUpdateBookingTestCases {
     @Test
     void  resfullBoookerUpdateBokingHeaderContentType() throws JsonProcessingException {
 
-        Response response =restFullBookerUpdateBookingURL();
+
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response= RestFullBookerUpdateBookingURL.response;
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         System.out.println(response.getHeaders().toString());
         MatcherAssert.assertThat(response.getHeaders().hasHeaderWithName("Content-type"),Matchers.is(true));
@@ -44,7 +47,9 @@ public class RestfullBookerUpdateBookingTestCases {
     @Test
     void  resfullBoookerUpdateBookingJsonSchema() throws JsonProcessingException {
 
-        Response response =restFullBookerUpdateBookingURL();
+
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response= RestFullBookerUpdateBookingURL.response;
         //1 to 4 ,all request was made till "when"  ie so upto when hamcrest liberary can be used for the validation the response
 
         //5. in this then() has to used which return the implementation class of validation reponse which  can help easily to validate the schema
@@ -72,7 +77,9 @@ public class RestfullBookerUpdateBookingTestCases {
 
 
 
-        Response response = restFullBookerUpdateBookingURL();
+
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response= RestFullBookerUpdateBookingURL.response;
 
         //  System.out.println(response1.asString());
         //it means with jasonpath you can get the values of response body and

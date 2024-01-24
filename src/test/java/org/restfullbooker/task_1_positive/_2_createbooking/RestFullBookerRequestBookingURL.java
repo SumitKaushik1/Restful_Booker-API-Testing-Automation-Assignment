@@ -14,6 +14,22 @@ import static org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTok
 
 public class RestFullBookerRequestBookingURL {
 
+    // when the RestfullBookerCreateBookingTestCases clas is need the response firstly the RestFullBookerRequestBookingURL class is loadeed
+    //then all the static variables is loaded it meaans the methods is called auto maticlaly
+    public static final Response response;
+
+
+    //here is the called who is handling the exception
+    //it is the good practice to intialize the static variable in the static block (in this you can intialize the final variable also
+    // otherwise without static block  you have to intialize the static variable in same line where it is decalared )
+    static {
+        try {
+            response = restFullBookerRequestBookingURL();
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
 /*
     static  Response request() throws JsonProcessingException {
@@ -70,7 +86,7 @@ public class RestFullBookerRequestBookingURL {
 
 
 
-
+//throws means its called will handle the exception
     static  Response restFullBookerRequestBookingURL() throws JsonProcessingException{
 
       /*  RequestSpecification requestSpecification= RestAssured.given();

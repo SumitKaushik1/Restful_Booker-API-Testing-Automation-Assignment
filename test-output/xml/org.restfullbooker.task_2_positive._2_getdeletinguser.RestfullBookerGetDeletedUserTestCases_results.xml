@@ -4,19 +4,19 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="2.698">
+           time="2.465">
     <properties></properties>
 
 
 
             <testcase
-                name="restBookerRequestDeleteUserContentType"
-                time="1.330"
+                name="restBookerRequestDeleteUserStatusOk"
+                time="1.199"
                 classname="org.restfullbooker.task_2_positive._2_getdeletinguser.RestfullBookerGetDeletedUserTestCases">
             </testcase>
             <testcase
-                name="restBookerRequestDeleteUserStatusOk"
-                time="1.368"
+                name="restBookerRequestDeleteUserContentType"
+                time="1.266"
                 classname="org.restfullbooker.task_2_positive._2_getdeletinguser.RestfullBookerGetDeletedUserTestCases">
             </testcase>
 </testsuite>

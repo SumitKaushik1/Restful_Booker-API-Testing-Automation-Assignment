@@ -11,6 +11,23 @@ import net.minidev.json.JSONObject;
 import static org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases.bookingidToUpdate;
 
 public class RestfullBookerGetBookingURL {
+    // when the RestfullBookerGetBookingTestCases clas is need the response firstly the RestfullBookerGetBookingURL class is loadeed
+    //then all the static variables is loaded it meaans the methods is called auto maticlaly
+    public static final Response response;
+
+
+    //here is the called who is handling the exception
+    //it is the good practice to intialize the static variable in the static block (in this you can intialize the final variable also
+    // otherwise without static block  you have to intialize the static variable in same line where it is decalared )
+    static {
+        try {
+            response = restfullBookerGetBookingURL();
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
     static Response restfullBookerGetBookingURL() throws JsonProcessingException {
 
         RequestSpecification requestSpecification= RestAssured.given();
