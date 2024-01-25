@@ -4,12 +4,12 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="3.490">
+           time="4.292">
     <properties></properties>
 
             <testcase
                 name="resfullBookerGetAllBookingContainsFirstnameAsText"
-                time="1.162"
+                time="1.358"
                 classname="org.restfullbooker.task_6_negative._3_updatatbooking.RestFullBookerUpdateBookingTestCases">
 
             <failure type="java.lang.AssertionError" message="
@@ -26,12 +26,12 @@ Expected: is <true>
 
             <testcase
                 name="resfullBoookerGetAllBokingHeaderContentType"
-                time="1.186"
+                time="1.563"
                 classname="org.restfullbooker.task_6_negative._3_updatatbooking.RestFullBookerUpdateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerUpdateBookingStatusOk"
-                time="1.142"
+                time="1.371"
                 classname="org.restfullbooker.task_6_negative._3_updatatbooking.RestFullBookerUpdateBookingTestCases">
             </testcase>
 </testsuite>

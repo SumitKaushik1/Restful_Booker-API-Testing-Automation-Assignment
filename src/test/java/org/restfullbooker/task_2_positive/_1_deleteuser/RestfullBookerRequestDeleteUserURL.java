@@ -10,6 +10,17 @@ import static io.restassured.RestAssured.given;
 import static org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases.deletedbookingid;
 
 public class RestfullBookerRequestDeleteUserURL {
+
+    // when the RestfullBookerUpdateBookingTestCases  clas is need the response firstly the RestFullBookerUpdateBookingURL class is loadeed
+    //then all the static variables is loaded it meaans the methods is called auto maticlaly
+
+    public static final  Response response;
+    static{
+        //here is the called who is handling the exception
+        //it is the good practice to intialize the static variable in the static block (in this you can intialize the final variable also
+        // otherwise without static block  you have to intialize the static variable in same line where it is decalared )
+        response= restfullBookerRequestDeleteUserURLRequest();
+    }
     public static Response restfullBookerRequestDeleteUserURLRequest(){
             /* payload.setUsername("admin");
                      payload.setPassword("password123");*/

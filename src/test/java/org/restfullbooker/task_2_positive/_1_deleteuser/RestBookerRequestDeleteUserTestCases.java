@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 
 
-import static org.restfullbooker.task_2_positive._1_deleteuser.RestfullBookerRequestDeleteUserURL.restfullBookerRequestDeleteUserURLRequest;
+
 
 public class RestBookerRequestDeleteUserTestCases {
 
@@ -16,7 +16,8 @@ public class RestBookerRequestDeleteUserTestCases {
     @Test
     void restBookerRequestDeleteUserStatusOk() throws JsonProcessingException {
 
-        Response response= restfullBookerRequestDeleteUserURLRequest();
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response= RestfullBookerRequestDeleteUserURL.response;
 
 
         MatcherAssert.assertThat(response.getStatusCode(), Matchers.is(204));
@@ -31,7 +32,8 @@ public class RestBookerRequestDeleteUserTestCases {
     @Test
     void  restBookerRequestDeleteUserContentType() throws JsonProcessingException {
 
-        Response response = restfullBookerRequestDeleteUserURLRequest();
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response= RestfullBookerRequestDeleteUserURL.response;
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         System.out.println(response.getHeaders().toString());
         MatcherAssert.assertThat(response.getHeaders().hasHeaderWithName("Content-type"),Matchers.is(true));
