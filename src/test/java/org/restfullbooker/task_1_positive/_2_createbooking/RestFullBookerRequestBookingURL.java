@@ -86,7 +86,7 @@ public class RestFullBookerRequestBookingURL {
 
 
 
-//throws means its called will handle the exception
+//throws means its caller will handle the exception
     static  Response restFullBookerRequestBookingURL() throws JsonProcessingException{
 
       /*  RequestSpecification requestSpecification= RestAssured.given();

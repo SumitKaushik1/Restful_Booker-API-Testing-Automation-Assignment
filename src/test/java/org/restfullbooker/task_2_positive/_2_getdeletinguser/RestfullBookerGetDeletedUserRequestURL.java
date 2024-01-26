@@ -25,6 +25,8 @@ public class RestfullBookerGetDeletedUserRequestURL {
         }
     }
 
+
+    //throws means its caller will handle the exception
     static Response RestfullBookerGetDeletedBookingURL() throws JsonProcessingException {
 
         RequestSpecification requestSpecification= RestAssured.given();

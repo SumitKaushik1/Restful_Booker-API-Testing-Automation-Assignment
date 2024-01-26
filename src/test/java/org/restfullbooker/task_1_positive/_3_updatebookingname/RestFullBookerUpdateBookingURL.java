@@ -30,6 +30,7 @@ public class RestFullBookerUpdateBookingURL {
     }
 
 
+    //throws means its caller will handle the exception
         public static Response  restFullBookerUpdateBookingURL() throws JsonProcessingException {
 
             JSONObject bookingDetails=new JSONObject();

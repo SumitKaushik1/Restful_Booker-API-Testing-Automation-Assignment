@@ -4,29 +4,29 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.960">
+           time="1.517">
     <properties></properties>
 
 
 
             <testcase
-                name="resfullBoookerUpdateBokingHeaderContentType"
-                time="0.004"
+                name="resfullBookerUpdateBookingStatusOk"
+                time="1.308"
                 classname="org.restfullbooker.task_1_positive._3_updatebookingname.RestfullBookerUpdateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerUpdataBookingFirstName"
-                time="0.088"
+                time="0.086"
+                classname="org.restfullbooker.task_1_positive._3_updatebookingname.RestfullBookerUpdateBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBoookerUpdateBokingHeaderContentType"
+                time="0.005"
                 classname="org.restfullbooker.task_1_positive._3_updatebookingname.RestfullBookerUpdateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBoookerUpdateBookingJsonSchema"
-                time="0.033"
-                classname="org.restfullbooker.task_1_positive._3_updatebookingname.RestfullBookerUpdateBookingTestCases">
-            </testcase>
-            <testcase
-                name="resfullBookerUpdateBookingStatusOk"
-                time="1.835"
+                time="0.118"
                 classname="org.restfullbooker.task_1_positive._3_updatebookingname.RestfullBookerUpdateBookingTestCases">
             </testcase>
 </testsuite>

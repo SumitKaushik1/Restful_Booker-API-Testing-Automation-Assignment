@@ -11,13 +11,15 @@ import org.testng.annotations.Test;
 import java.io.File;
 
 
-import static org.restfullbooker.task_3_positive._3_GitId.RestFullBookerGetIdURL.restfullBookerGetidgURL;
+
 
 public class RestFullBookerGetIdTestCases {
     @Test
     void  resfullBookerUpdateBookingStatusOk() throws JsonProcessingException {
 
-        Response response= restfullBookerGetidgURL();
+
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response = RestFullBookerGetIdURL.response;
 
 
         MatcherAssert.assertThat(response.getStatusCode(), Matchers.is(200));
@@ -30,7 +32,8 @@ public class RestFullBookerGetIdTestCases {
 
 
 
-        Response response =restfullBookerGetidgURL();
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response = RestFullBookerGetIdURL.response;
 
         //  System.out.println(response1.asString());
         //it means with jasonpath you can get the values of response body and
@@ -69,7 +72,8 @@ public class RestFullBookerGetIdTestCases {
     @Test
     void  resfullBoookerGetAllBokingHeaderContentType() throws JsonProcessingException {
 
-        Response response = restfullBookerGetidgURL();
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response = RestFullBookerGetIdURL.response;
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         System.out.println(response.getHeaders().toString());
         MatcherAssert.assertThat(response.getHeaders().hasHeaderWithName("Content-type"), Matchers.is(true));
@@ -80,7 +84,10 @@ public class RestFullBookerGetIdTestCases {
     @Test
     void  resfullBoookerGetBookingJsonSchema() throws JsonProcessingException {
 
-        Response response =restfullBookerGetidgURL();
+
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response = RestFullBookerGetIdURL.response;
+
         //1 to 4 ,all request was made till "when"  ie so upto when hamcrest liberary can be used for the validation the response
 
         //5. in this then() has to used which return the implementation class of validation reponse which  can help easily to validate the schema

@@ -4,39 +4,39 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="18.090">
+           time="18.791">
     <properties></properties>
 
 
 
             <testcase
-                name="resfullBoookerTokenStatusOk"
-                time="0.014"
+                name="resfullBoookerTokenBodyJsonSchema"
+                time="2.266"
                 classname="org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases">
             </testcase>
             <testcase
                 name="resfullBoookerResponseContainToken"
-                time="0.072"
-                classname="org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases">
-            </testcase>
-            <testcase
-                name="resfullBoookerTokenBodyJsonSchema"
-                time="2.370"
+                time="0.029"
                 classname="org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases">
             </testcase>
             <testcase
                 name="resfullBoookerTokenHeaderContentType"
-                time="0.005"
+                time="0.003"
                 classname="org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases">
             </testcase>
             <testcase
-                name="resfullBoookerTokenBodyToken"
-                time="3.959"
+                name="resfullBoookerTokenStatusOk"
+                time="0.004"
                 classname="org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases">
             </testcase>
             <testcase
                 name="resfullBoookerResponseIsThere"
-                time="11.670"
+                time="13.768"
+                classname="org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases">
+            </testcase>
+            <testcase
+                name="resfullBoookerTokenBodyToken"
+                time="2.721"
                 classname="org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases">
             </testcase>
 </testsuite>

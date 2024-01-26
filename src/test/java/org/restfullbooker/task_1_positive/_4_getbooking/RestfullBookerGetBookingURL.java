@@ -28,6 +28,7 @@ public class RestfullBookerGetBookingURL {
     }
 
 
+    //throws means its caller will handle the exception
     static Response restfullBookerGetBookingURL() throws JsonProcessingException {
 
         RequestSpecification requestSpecification= RestAssured.given();

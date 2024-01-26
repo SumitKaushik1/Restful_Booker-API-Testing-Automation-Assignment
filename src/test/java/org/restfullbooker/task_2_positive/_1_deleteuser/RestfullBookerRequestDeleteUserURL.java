@@ -21,6 +21,10 @@ public class RestfullBookerRequestDeleteUserURL {
         // otherwise without static block  you have to intialize the static variable in same line where it is decalared )
         response= restfullBookerRequestDeleteUserURLRequest();
     }
+
+
+
+
     public static Response restfullBookerRequestDeleteUserURLRequest(){
             /* payload.setUsername("admin");
                      payload.setPassword("password123");*/
