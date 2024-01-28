@@ -16,7 +16,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.restfullbooker.task_4_positive._1_createbooking.RestFullBookerRequestBookingURL.restFullBookerRequestBookingURL;
+
 
 
 public class RestfullBookerCreateBookingTestCases {
@@ -30,7 +30,8 @@ public class RestfullBookerCreateBookingTestCases {
     @Test
     void  resfullBookerResponseContainBookingId() throws JsonProcessingException {
 
-        Response response =restFullBookerRequestBookingURL();
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response =RestFullBookerRequestBookingURL.response;
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         // Assume you have a method that returns a response string
         // Replace this with the actual method or API call that returns your response
@@ -64,7 +65,8 @@ public class RestfullBookerCreateBookingTestCases {
     @Test
     void  resfullBookerCreateBookingStatusOk() throws JsonProcessingException {
 
-        Response response= restFullBookerRequestBookingURL();
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response= RestFullBookerRequestBookingURL.response;
 
 
         MatcherAssert.assertThat(response.getStatusCode(), Matchers.is(200));
@@ -75,7 +77,8 @@ public class RestfullBookerCreateBookingTestCases {
     @Test
     void  resfullBookerCreateBokingHeaderContentType() throws JsonProcessingException {
 
-        Response response = restFullBookerRequestBookingURL();
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response = RestFullBookerRequestBookingURL.response;
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         System.out.println(response.getHeaders().toString());
         MatcherAssert.assertThat(response.getHeaders().hasHeaderWithName("Content-type"), Matchers.is(true));
@@ -90,7 +93,8 @@ public class RestfullBookerCreateBookingTestCases {
     @Test
     void  resfullBookerTokenBodyJsonSchema() throws JsonProcessingException {
 
-        Response response = restFullBookerRequestBookingURL();
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response = RestFullBookerRequestBookingURL.response;
         //1 to 4 ,all request was made till "when"  ie so upto when hamcrest liberary can be used for the validation the response
 
         //5. in this then() has to used which return the implementation class of validation reponse which  can help easily to validate the schema
@@ -113,8 +117,8 @@ public class RestfullBookerCreateBookingTestCases {
 
 
 
-
-        Response response = restFullBookerRequestBookingURL();
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response = RestFullBookerRequestBookingURL.response;
 
         //  System.out.println(response1.asString());
         //it means with jasonpath you can get the values of response body and

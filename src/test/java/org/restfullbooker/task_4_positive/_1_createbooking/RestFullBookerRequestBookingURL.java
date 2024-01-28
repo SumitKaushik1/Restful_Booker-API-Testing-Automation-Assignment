@@ -67,8 +67,22 @@ public class RestFullBookerRequestBookingURL {
     }*/
 
 
+    // when the RestfullBookerCreateBookingTestCases clas is need the response firstly the RestFullBookerRequestBookingURL class is loadeed
+    //then all the static variables is loaded it meaans the methods is called automaticlaly
+public static final  Response response;
 
+static{
 
+    try {
+        //here is the called who is handling the exception
+        //it is the good practice to intialize the static variable in the static block (in this you can intialize the final variable also
+        // otherwise without static block  you have to intialize the static variable in same line where it is decalared )
+        response=restFullBookerRequestBookingURL();
+    } catch (JsonProcessingException e) {
+        throw new RuntimeException(e);
+    }
+
+}
 
     static  Response restFullBookerRequestBookingURL() throws JsonProcessingException{
 
