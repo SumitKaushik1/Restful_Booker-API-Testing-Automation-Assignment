@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker/src/test/java/org/restfullbooker"
+<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker"
            tests="2"
            failures="1"
            errors="0"
            skipped="0"
-           time="1.172">
+           time="1.158">
     <properties></properties>
 
             <testcase
                 name="restBookerRequestDeleteUserStatusOk"
-                time="1.166"
+                time="1.155"
                 classname="org.restfullbooker.task_2_positive._1_deleteuser.RestBookerRequestDeleteUserTestCases">
 
             <failure type="java.lang.AssertionError" message="
@@ -26,7 +26,7 @@ Expected: is <204>
 
             <testcase
                 name="restBookerRequestDeleteUserContentType"
-                time="0.006"
+                time="0.003"
                 classname="org.restfullbooker.task_2_positive._1_deleteuser.RestBookerRequestDeleteUserTestCases">
             </testcase>
 </testsuite>

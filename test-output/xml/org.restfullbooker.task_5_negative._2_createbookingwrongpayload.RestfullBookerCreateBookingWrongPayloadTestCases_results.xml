@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker/src/test/java/org/restfullbooker"
+<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="2.048">
+           time="1.597">
     <properties></properties>
 
 
 
             <testcase
                 name="resfullBookerCreateBookingStatusOk"
-                time="2.048"
+                time="1.597"
                 classname="org.restfullbooker.task_5_negative._2_createbookingwrongpayload.RestfullBookerCreateBookingWrongPayloadTestCases">
             </testcase>
 </testsuite>
