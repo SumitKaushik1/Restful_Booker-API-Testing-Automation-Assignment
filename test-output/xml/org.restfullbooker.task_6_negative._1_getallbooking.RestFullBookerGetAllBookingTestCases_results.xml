@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker"
+<testsuite name="restfullbooker"
            tests="4"
            failures="0"
            errors="0"
            skipped="0"
-           time="5.159">
+           time="9.070">
     <properties></properties>
 
 
 
             <testcase
                 name="resfullBoookerGetBookingJsonSchema"
-                time="1.240"
+                time="2.041"
                 classname="org.restfullbooker.task_6_negative._1_getallbooking.RestFullBookerGetAllBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerGetAllBookingContainsBookingIdAsText"
-                time="1.467"
+                time="3.298"
                 classname="org.restfullbooker.task_6_negative._1_getallbooking.RestFullBookerGetAllBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerGetAllBookingStatusOk"
-                time="1.261"
+                time="2.021"
                 classname="org.restfullbooker.task_6_negative._1_getallbooking.RestFullBookerGetAllBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBoookerGetAllBokingHeaderContentType"
-                time="1.191"
+                time="1.710"
                 classname="org.restfullbooker.task_6_negative._1_getallbooking.RestFullBookerGetAllBookingTestCases">
             </testcase>
 </testsuite>

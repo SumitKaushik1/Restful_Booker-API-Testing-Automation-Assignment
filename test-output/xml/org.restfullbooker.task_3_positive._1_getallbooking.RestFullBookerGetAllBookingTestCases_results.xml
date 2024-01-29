@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker"
+<testsuite name="restfullbooker"
            tests="4"
            failures="0"
            errors="0"
            skipped="0"
-           time="1.828">
+           time="2.930">
     <properties></properties>
 
 
 
             <testcase
                 name="resfullBoookerGetAllBokingHeaderContentType"
-                time="0.007"
-                classname="org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases">
-            </testcase>
-            <testcase
-                name="resfullBoookerGetBookingJsonSchema"
-                time="0.145"
-                classname="org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases">
-            </testcase>
-            <testcase
-                name="resfullBookerGetAllBookingContainsBookingIdAsText"
-                time="0.467"
+                time="0.003"
                 classname="org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerGetAllBookingStatusOk"
-                time="1.209"
+                time="0.008"
+                classname="org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBookerGetAllBookingContainsBookingIdAsText"
+                time="2.185"
+                classname="org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBoookerGetBookingJsonSchema"
+                time="0.734"
                 classname="org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases">
             </testcase>
 </testsuite>

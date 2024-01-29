@@ -11,6 +11,9 @@ import static io.restassured.RestAssured.given;
 
 public class RestFullBookerRequestTokenURL {
 
+    // when the RestBookerRequestDeleteUserTestCases clas is need the response firstly the RestfullBookerRequestDeleteUserURL class is loadeed
+    //then all the static variables is loaded it means the methods is called automaticlally
+    public static final Response response=restFullBookerRequestTokenURLRequest();
     static  Response restFullBookerRequestTokenURLRequest(){
             /* payload.setUsername("admin");
                      payload.setPassword("password123");*/
