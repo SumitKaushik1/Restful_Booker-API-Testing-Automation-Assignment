@@ -13,6 +13,17 @@ import static org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTok
 
 public class RestFullBookerRequestBookingWrongPayloadURL {
 
+    public static final Response response;
+
+    static{
+
+        try {
+            response=RestFullBookerRequestBookingWrongPayloadURL();
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 
 /*
     static  Response request() throws JsonProcessingException {

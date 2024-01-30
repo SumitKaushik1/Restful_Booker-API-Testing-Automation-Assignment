@@ -20,7 +20,7 @@ public class RestfullBookerCreateBookingWrongPayloadTestCases {
     @Test
     void  resfullBookerCreateBookingStatusOk() throws JsonProcessingException {
 
-        Response response= RestFullBookerRequestBookingWrongPayloadURL();
+        Response response= RestFullBookerRequestBookingWrongPayloadURL.response;
 
 
         MatcherAssert.assertThat(response.getStatusCode(), Matchers.is(500));

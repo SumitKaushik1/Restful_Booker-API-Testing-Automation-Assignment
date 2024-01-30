@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="restfullbooker"
+<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker"
            tests="6"
            failures="0"
            errors="0"
            skipped="0"
-           time="11.501">
+           time="1.211">
     <properties></properties>
 
 
 
             <testcase
-                name="resfullBoookerResponseIsThere"
-                time="0.011"
-                classname="org.restfullbooker.task_5_negative._1_createtoken.RestfulBookerTokenTestCases">
-            </testcase>
-            <testcase
-                name="resfullBoookerTokenBodyJsonSchema"
-                time="3.317"
-                classname="org.restfullbooker.task_5_negative._1_createtoken.RestfulBookerTokenTestCases">
-            </testcase>
-            <testcase
                 name="resfullBoookerTokenHeaderContentType"
-                time="0.049"
-                classname="org.restfullbooker.task_5_negative._1_createtoken.RestfulBookerTokenTestCases">
-            </testcase>
-            <testcase
-                name="resfullBoookerTokenBodyToken"
-                time="5.325"
+                time="0.003"
                 classname="org.restfullbooker.task_5_negative._1_createtoken.RestfulBookerTokenTestCases">
             </testcase>
             <testcase
                 name="resfullBoookerResponseContainToken"
-                time="2.785"
+                time="0.004"
+                classname="org.restfullbooker.task_5_negative._1_createtoken.RestfulBookerTokenTestCases">
+            </testcase>
+            <testcase
+                name="resfullBoookerTokenBodyToken"
+                time="0.049"
+                classname="org.restfullbooker.task_5_negative._1_createtoken.RestfulBookerTokenTestCases">
+            </testcase>
+            <testcase
+                name="resfullBoookerTokenBodyJsonSchema"
+                time="0.011"
                 classname="org.restfullbooker.task_5_negative._1_createtoken.RestfulBookerTokenTestCases">
             </testcase>
             <testcase
                 name="resfullBoookerTokenStatusOk"
-                time="0.014"
+                time="0.003"
+                classname="org.restfullbooker.task_5_negative._1_createtoken.RestfulBookerTokenTestCases">
+            </testcase>
+            <testcase
+                name="resfullBoookerResponseIsThere"
+                time="1.141"
                 classname="org.restfullbooker.task_5_negative._1_createtoken.RestfulBookerTokenTestCases">
             </testcase>
 </testsuite>
