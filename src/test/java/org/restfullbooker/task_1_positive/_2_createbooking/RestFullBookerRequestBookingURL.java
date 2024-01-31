@@ -9,6 +9,8 @@ import io.restassured.specification.RequestSpecification;
 import org.restfullbooker.pojorequest.BookingDetails;
 
 import static io.restassured.RestAssured.given;
+import static org.restfullbooker.APIConstants.BASE_PATH_BOOKING;
+import static org.restfullbooker.APIConstants.BASE_URI;
 import static org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases.token;
 
 
@@ -149,8 +151,8 @@ public class RestFullBookerRequestBookingURL {
        requestSpecification.cookie(token);
         //requestSpecification.cookie("aafd2ca64353106");
         // Adding URI
-        requestSpecification.baseUri("https://restful-booker.herokuapp.com");
-        requestSpecification.basePath("/booking");
+        requestSpecification.baseUri(BASE_URI);
+        requestSpecification.basePath(BASE_PATH_BOOKING);
         // Adding body as string
         requestSpecification.body(payload);
 

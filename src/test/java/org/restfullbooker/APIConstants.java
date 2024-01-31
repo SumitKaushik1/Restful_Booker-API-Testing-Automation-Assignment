@@ -6,4 +6,6 @@ public class APIConstants {
     //PUBLIC means it can be accessed anywhere ,static menas it is at class level and can directly called by the classnam
     //final means once is it is initialised it cannot be changed
 
+    public static final String BASE_PATH_BOOKING="/booking";
+
 }

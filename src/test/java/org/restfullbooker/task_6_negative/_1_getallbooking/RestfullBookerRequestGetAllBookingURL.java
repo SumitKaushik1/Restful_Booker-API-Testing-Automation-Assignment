@@ -10,6 +10,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class RestfullBookerRequestGetAllBookingURL{
 
+
     static Response restfullBookerRequestGetAllBookingURL() throws JsonProcessingException {
 
         RequestSpecification requestSpecification= RestAssured.given();

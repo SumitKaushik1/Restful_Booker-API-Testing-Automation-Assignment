@@ -4,19 +4,24 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.345">
+           time="1.306">
     <properties></properties>
 
 
 
             <testcase
-                name="resfullBookerCreateBookingStatusOk"
-                time="0.006"
+                name="resfullBookerResponseContainBookingId"
+                time="1.233"
+                classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBookerTokenBodyJsonSchema"
+                time="0.014"
                 classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerCreateBookingBookingId"
-                time="0.049"
+                time="0.050"
                 classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
@@ -25,13 +30,8 @@
                 classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
-                name="resfullBookerTokenBodyJsonSchema"
-                time="0.012"
-                classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
-            </testcase>
-            <testcase
-                name="resfullBookerResponseContainBookingId"
-                time="1.274"
+                name="resfullBookerCreateBookingStatusOk"
+                time="0.005"
                 classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
 </testsuite>

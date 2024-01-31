@@ -8,6 +8,8 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import net.minidev.json.JSONObject;
 
+import static org.restfullbooker.APIConstants.BASE_PATH_BOOKING;
+import static org.restfullbooker.APIConstants.BASE_URI;
 import static org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases.bookingidToUpdate;
 
 public class RestFullBookerUpdateBookingURL {
@@ -139,9 +141,9 @@ public class RestFullBookerUpdateBookingURL {
 
 
             // Adding URI
-            requestSpecification.baseUri("https://restful-booker.herokuapp.com");
+            requestSpecification.baseUri(BASE_URI);
             System.out.println(bookingidToUpdate);
-            requestSpecification.basePath("/booking/"+bookingidToUpdate);
+            requestSpecification.basePath(BASE_PATH_BOOKING+"/"+bookingidToUpdate);
 
             // Adding body as string
             requestSpecification.body(payload);
