@@ -97,7 +97,7 @@ public class RestFullBookerGetIdTestCases {
 
         validatableResponse.assertThat()
                 .body(JsonSchemaValidator.
-                        matchesJsonSchema(new File("src/test/java/resource/task3/schema3.json")));
+                        matchesJsonSchema(new File("src/test/resource/task3/schema3.json")));
 
 
 

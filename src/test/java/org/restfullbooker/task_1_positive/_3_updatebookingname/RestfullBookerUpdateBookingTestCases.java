@@ -59,7 +59,7 @@ public class RestfullBookerUpdateBookingTestCases {
 
         validatableResponse.assertThat()
                 .body(JsonSchemaValidator.
-                        matchesJsonSchema(new File("src/test/java/resource/task1/schema2.json")));
+                        matchesJsonSchema(new File("src/test/resource/task1/schema2.json")));
 
 
 

@@ -381,7 +381,7 @@ public class RestfulBookerTokenTestCases {
 
                     validatableResponse.assertThat()
                             .body(JsonSchemaValidator.
-                                    matchesJsonSchema(new File("src/test/java/resource/task1/schema.json")));
+                                    matchesJsonSchema(new File("src/test/resource/task1/schema.json")));
                  }
 
 

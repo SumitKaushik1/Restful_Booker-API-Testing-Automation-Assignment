@@ -4,34 +4,34 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.974">
+           time="2.272">
     <properties></properties>
 
 
 
             <testcase
-                name="resfullBookerCreateBookingStatusOk"
-                time="0.006"
-                classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
-            </testcase>
-            <testcase
-                name="resfullBookerCreateBookingBookingId"
-                time="0.410"
-                classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
-            </testcase>
-            <testcase
-                name="resfullBookerResponseContainBookingId"
-                time="1.518"
+                name="resfullBookerCreateBokingHeaderContentType"
+                time="0.010"
                 classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerTokenBodyJsonSchema"
-                time="0.035"
+                time="0.230"
                 classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
-                name="resfullBookerCreateBokingHeaderContentType"
-                time="0.005"
+                name="resfullBookerCreateBookingBookingId"
+                time="0.392"
+                classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBookerResponseContainBookingId"
+                time="1.627"
+                classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBookerCreateBookingStatusOk"
+                time="0.013"
                 classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
 </testsuite>
