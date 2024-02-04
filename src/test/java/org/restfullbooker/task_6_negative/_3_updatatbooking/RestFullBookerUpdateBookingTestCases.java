@@ -19,7 +19,8 @@ public class RestFullBookerUpdateBookingTestCases {
     @Test
     void  resfullBookerUpdateBookingStatusOk() throws JsonProcessingException {
 
-        Response response= restFullBookerUpdateBookingURL();
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response= RestfulBookerUpdateBookingURL.response;
 
 
         MatcherAssert.assertThat(response.getStatusCode(), Matchers.is(405));
@@ -31,8 +32,8 @@ public class RestFullBookerUpdateBookingTestCases {
 
 
 
-
-        Response response =restFullBookerUpdateBookingURL();
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response= RestfulBookerUpdateBookingURL.response;
 
         //  System.out.println(response1.asString());
         //it means with jasonpath you can get the values of response body and
@@ -77,7 +78,9 @@ public class RestFullBookerUpdateBookingTestCases {
     @Test
     void  resfullBoookerGetAllBokingHeaderContentType() throws JsonProcessingException {
 
-        Response response = restFullBookerUpdateBookingURL();
+        // calling method will take time so directly teh value fo final static method will save time while calling
+        Response response= RestfulBookerUpdateBookingURL.response;
+
         //3. (by content ype you get-> true),true since both true matched so assertion is passed
         System.out.println(response.getHeaders().toString());
         MatcherAssert.assertThat(response.getHeaders().hasHeaderWithName("Content-type"), Matchers.is(true));

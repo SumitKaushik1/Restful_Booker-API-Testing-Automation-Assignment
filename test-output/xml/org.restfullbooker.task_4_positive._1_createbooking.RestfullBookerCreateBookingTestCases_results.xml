@@ -4,12 +4,12 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="1.302">
+           time="1.599">
     <properties></properties>
 
             <testcase
                 name="resfullBookerTokenBodyJsonSchema"
-                time="0.005"
+                time="0.004"
                 classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
 
             <failure type="io.restassured.module.jsv.JsonSchemaValidationException" message="java.io.FileNotFoundException: src\test\java\resource\task1\schema1.json (The system cannot find the path specified)">
@@ -23,23 +23,23 @@
 
 
             <testcase
-                name="resfullBookerCreateBokingHeaderContentType"
-                time="0.006"
+                name="resfullBookerCreateBookingBookingId"
+                time="0.064"
                 classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerResponseContainBookingId"
-                time="1.206"
+                time="1.520"
                 classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerCreateBookingStatusOk"
-                time="0.003"
+                time="0.006"
                 classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
-                name="resfullBookerCreateBookingBookingId"
-                time="0.082"
+                name="resfullBookerCreateBokingHeaderContentType"
+                time="0.005"
                 classname="org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
 </testsuite>

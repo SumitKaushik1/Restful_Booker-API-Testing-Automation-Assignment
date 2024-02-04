@@ -20,6 +20,7 @@ public class RestfullBookerCreateBookingWrongPayloadTestCases {
     @Test
     void  resfullBookerCreateBookingStatusOk() throws JsonProcessingException {
 
+        // calling method will take time so directly teh value fo final static method will save time while calling
         Response response= RestFullBookerRequestBookingWrongPayloadURL.response;
 
 

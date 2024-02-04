@@ -26,7 +26,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 
 import static org.hamcrest.Matchers.is;
-import static org.restfullbooker.task_1_positive._1_createtoken.RestFullBookerRequestTokenURL.restFullBookerRequestTokenURLRequest;
+
 
   /*
                     Certainly! Let's compare the two provided code snippets, one following a BDD style and the other following a non-BDD style, focusing on their structure, readability, and use of natural language:
@@ -221,7 +221,7 @@ test case>100
 public class RestfulBookerTokenTestCases {
     //@Test is the annotation which tells the metadata to compiler that compiler use to show further ui on the console after result
     // to testng file that these are test cases of testng
-   public  static  String token;
+   public static String token;
 
 
     @Test

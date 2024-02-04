@@ -17,6 +17,8 @@ public class RestFullBookerUpdateBookingURL {
 
     // when the RestfullBookerUpdateBookingTestCases  clas is need the response firstly the RestFullBookerUpdateBookingURL class is loadeed
     //then all the static variables is loaded it meaans the methods is called auto maticlaly
+
+    //every request has seperate respone we need different variable for each request
     public static final Response response;
 
 

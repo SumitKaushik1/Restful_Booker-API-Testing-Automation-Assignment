@@ -10,6 +10,21 @@ import io.restassured.specification.RequestSpecification;
 
 public class RestfullBookerRequestGetAllBookingURL{
 
+    // when the RestFullBookerGetAllBookingTestCases clas is need the response firstly the RestfullBookerRequestGetAllBookingURL class is loadeed
+    //then all the static variables is loaded it means the methods is called automaticlally
+    public static final Response response;
+
+    static{
+
+        try {
+            //here is the called who is handling the exception
+            //it is the good practice to intialize the static variable in the static block (in this you can intialize the final variable also
+            // otherwise without static block  you have to intialize the static variable in same line where it is decalared )
+            response=restfullBookerRequestGetAllBookingURL();
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     static Response restfullBookerRequestGetAllBookingURL() throws JsonProcessingException {
 

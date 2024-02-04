@@ -16,7 +16,7 @@ public class RestfullBookerGetBookingURL {
     // when the RestfullBookerGetBookingTestCases clas is need the response firstly the RestfullBookerGetBookingURL class is loadeed
     //then all the static variables is loaded it meaans the methods is called auto maticlaly
     public static final Response response;
-
+    //every request has seperate response we need different variable for each request
 
     //here is the called who is handling the exception
     //it is the good practice to intialize the static variable in the static block (in this you can intialize the final variable also

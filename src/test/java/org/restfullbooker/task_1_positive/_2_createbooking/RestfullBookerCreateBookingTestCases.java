@@ -2,26 +2,24 @@ package org.restfullbooker.task_1_positive._2_createbooking;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gson.Gson;
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
+
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
-import io.restassured.specification.RequestSpecification;
+
 import net.minidev.json.JSONObject;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.restfullbooker.pojoresponse.BookingDetailsResponse;
-import org.restfullbooker.pojoresponse.Token;
-import org.restfullbooker.task_1_positive._1_createtoken.RestFullBookerRequestTokenURL;
+
 import org.testng.annotations.Test;
 
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.restfullbooker.task_1_positive._2_createbooking.RestFullBookerRequestBookingURL.restFullBookerRequestBookingURL;
+
 
 
 public class RestfullBookerCreateBookingTestCases {
@@ -69,7 +67,8 @@ public class RestfullBookerCreateBookingTestCases {
 
     @Test
     void  resfullBookerCreateBookingStatusOk() throws JsonProcessingException {
-// calling method will take time so directly teh value fo final static method will save time while calling
+     // calling method will take time so directly teh value fo final static
+        //method will save time while calling
         Response response =RestFullBookerRequestBookingURL.response;
 
 

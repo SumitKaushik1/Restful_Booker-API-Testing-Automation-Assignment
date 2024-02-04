@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 import static org.restfullbooker.task_4_positive._1_createbooking.RestfullBookerCreateBookingTestCases.deletedbookingid;
 public class RestfullBookerRequestDeleteUserURL {
 
-    // when the RestfulBookerTokenTestCases clas is need the response firstly the RestFullBookerRequestTokenURL class is loadeed
+    // when the RestBookerRequestDeleteUserTestCases clas is need the response firstly the RestfullBookerRequestDeleteUserURL class is loadeed
     //then all the static variables is loaded it means the methods is called automaticlally
     public static final Response response;
 

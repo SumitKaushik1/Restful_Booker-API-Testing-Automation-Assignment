@@ -4,12 +4,12 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="1.324">
+           time="1.490">
     <properties></properties>
 
             <testcase
                 name="resfullBoookerTokenBodyJsonSchema"
-                time="0.003"
+                time="0.004"
                 classname="org.restfullbooker.task_5_negative._1_createtoken.RestfulBookerTokenTestCases">
 
             <failure type="io.restassured.module.jsv.JsonSchemaValidationException" message="java.io.FileNotFoundException: src\test\java\resource\task1\schema.json (The system cannot find the path specified)">
@@ -23,13 +23,18 @@
 
 
             <testcase
-                name="resfullBoookerTokenStatusOk"
-                time="0.004"
+                name="resfullBoookerResponseContainToken"
+                time="0.003"
                 classname="org.restfullbooker.task_5_negative._1_createtoken.RestfulBookerTokenTestCases">
             </testcase>
             <testcase
-                name="resfullBoookerResponseIsThere"
-                time="1.261"
+                name="resfullBoookerTokenBodyToken"
+                time="0.044"
+                classname="org.restfullbooker.task_5_negative._1_createtoken.RestfulBookerTokenTestCases">
+            </testcase>
+            <testcase
+                name="resfullBoookerTokenStatusOk"
+                time="0.003"
                 classname="org.restfullbooker.task_5_negative._1_createtoken.RestfulBookerTokenTestCases">
             </testcase>
             <testcase
@@ -38,13 +43,8 @@
                 classname="org.restfullbooker.task_5_negative._1_createtoken.RestfulBookerTokenTestCases">
             </testcase>
             <testcase
-                name="resfullBoookerTokenBodyToken"
-                time="0.046"
-                classname="org.restfullbooker.task_5_negative._1_createtoken.RestfulBookerTokenTestCases">
-            </testcase>
-            <testcase
-                name="resfullBoookerResponseContainToken"
-                time="0.007"
+                name="resfullBoookerResponseIsThere"
+                time="1.433"
                 classname="org.restfullbooker.task_5_negative._1_createtoken.RestfulBookerTokenTestCases">
             </testcase>
 </testsuite>

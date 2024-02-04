@@ -12,18 +12,32 @@ import static org.restfullbooker.APIConstants.*;
 
 public class RestFullBookerRequestTokenURL {
 
-// when the RestfulBookerTokenTestCase clas is need the response firstly the RestFullBookerRequestTokenURL class is loadeed
-    //then all the static variables is loaded it meaans the methods is called auto maticlaly
-    public static final Response response;
+// when the RestfulBookerTokenTestCase clas is need the response firstly the RestFullBookerRequestTokenURL class is loaded
+    //then all the static variables is loaded it means the methods is called automaticlaly
 
+    //every request has seperate respone we need different variable for each request
+    //i want to share to other class it is made static data member
+    public static final Response response;
+ //response cannot be changed when shared //static easily called by classname
 
     //it is the good practice to intialize the static variable in the static block (in this you can intialize the final variable also
-    // otherwise without static block  you have to intialize the static variable in same line where it is decalared )
+    // otherwise without static block  you have to intialize the static variable in same line where it is declared )
     static{
+        //final only initialized by static block or the at time of declaration
+
+
+        //now we know when the object  RestFullBookerRequestTokenURL is made by the jvm.
+        //is loaded in teh metaspace to tha all the static variable are loaded in the metaspace now
+        //since the response is public  so this response can also be used outside the class
+
+        //.response means jvm is currently working on the object
+        //   RestFullBookerRequestTokenURL that
+        //response  static variable to assigned
         response=restFullBookerRequestTokenURLRequest();
     }
 
-    static  Response restFullBookerRequestTokenURLRequest(){
+    //this method only be used within class only
+   private  static  Response restFullBookerRequestTokenURLRequest(){
             /* payload.setUsername("admin");
                      payload.setPassword("password123");*/
 

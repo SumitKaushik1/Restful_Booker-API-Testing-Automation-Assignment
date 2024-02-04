@@ -4,34 +4,34 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="2.272">
+           time="1.900">
     <properties></properties>
 
 
 
             <testcase
-                name="resfullBookerCreateBokingHeaderContentType"
-                time="0.010"
+                name="resfullBookerResponseContainBookingId"
+                time="1.661"
                 classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerTokenBodyJsonSchema"
-                time="0.230"
-                classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
-            </testcase>
-            <testcase
-                name="resfullBookerCreateBookingBookingId"
-                time="0.392"
-                classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
-            </testcase>
-            <testcase
-                name="resfullBookerResponseContainBookingId"
-                time="1.627"
+                time="0.029"
                 classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerCreateBookingStatusOk"
-                time="0.013"
+                time="0.005"
+                classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBookerCreateBokingHeaderContentType"
+                time="0.004"
+                classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBookerCreateBookingBookingId"
+                time="0.201"
                 classname="org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases">
             </testcase>
 </testsuite>

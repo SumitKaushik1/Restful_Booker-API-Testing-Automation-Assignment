@@ -7,6 +7,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.restfullbooker.pojorequest.BookingDetails;
+import org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases;
 
 import static io.restassured.RestAssured.given;
 import static org.restfullbooker.APIConstants.BASE_PATH_BOOKING;
@@ -16,8 +17,12 @@ import static org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTok
 
 public class RestFullBookerRequestBookingURL {
 
+ public  static final String  TOKEN=RestfulBookerTokenTestCases.token;
+
     // when the RestfullBookerCreateBookingTestCases clas is need the response firstly the RestFullBookerRequestBookingURL class is loadeed
     //then all the static variables is loaded it meaans the methods is called auto maticlaly
+
+    //every request has seperate respone we need different variable for each request
     public static final Response response;
 
 
@@ -147,8 +152,8 @@ public class RestFullBookerRequestBookingURL {
         requestSpecification.contentType(ContentType.JSON);
         //requestSpecification.accept(ContentType.JSON);//header is set
         //note bydefault the accept header response is json no need to specify that otherwise it will give error
-         System.out.println(token);
-       requestSpecification.cookie(token);
+         System.out.println("RestFullBookerRequestBookingURL"+TOKEN);
+       requestSpecification.cookie(TOKEN);
         //requestSpecification.cookie("aafd2ca64353106");
         // Adding URI
         requestSpecification.baseUri(BASE_URI);

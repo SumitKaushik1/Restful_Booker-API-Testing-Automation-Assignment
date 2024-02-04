@@ -9,15 +9,21 @@ import io.restassured.specification.RequestSpecification;
 import org.restfullbooker.pojorequest.BookingDetails;
 
 import static org.restfullbooker.task_1_positive._1_createtoken.RestfulBookerTokenTestCases.token;
+import static org.restfullbooker.task_1_positive._2_createbooking.RestFullBookerRequestBookingURL.TOKEN;
 
 
 public class RestFullBookerRequestBookingWrongPayloadURL {
 
+    // when the RestfullBookerCreateBookingWrongPayloadTestCases clas is need the response firstly the RestFullBookerRequestBookingWrongPayloadURL class is loadeed
+    //then all the static variables is loaded it means the methods is called automaticlally
     public static final Response response;
 
     static{
 
         try {
+            //here is the called who is handling the exception
+            //it is the good practice to intialize the static variable in the static block (in this you can intialize the final variable also
+            // otherwise without static block  you have to intialize the static variable in same line where it is decalared )
             response=RestFullBookerRequestBookingWrongPayloadURL();
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
@@ -149,7 +155,7 @@ public class RestFullBookerRequestBookingWrongPayloadURL {
 
         //requestSpecification.accept(ContentType.JSON);//header is set
         //note bydefault the accept header response is json no need to specify that otherwise it will give error
-         System.out.println(token);
+         System.out.println(TOKEN);
        requestSpecification.cookie(token);
         //requestSpecification.cookie("aafd2ca64353106");
         // Adding URI
