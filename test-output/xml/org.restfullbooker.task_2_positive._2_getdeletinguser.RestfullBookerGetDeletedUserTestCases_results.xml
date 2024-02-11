@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker"
+<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker/src/test/java/org/restfullbooker"
            tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="1.484">
+           time="1.358">
     <properties></properties>
 
 
 
             <testcase
                 name="restBookerRequestDeleteUserContentType"
-                time="0.003"
+                time="0.006"
                 classname="org.restfullbooker.task_2_positive._2_getdeletinguser.RestfullBookerGetDeletedUserTestCases">
             </testcase>
             <testcase
                 name="restBookerRequestDeleteUserStatusOk"
-                time="1.481"
+                time="1.352"
                 classname="org.restfullbooker.task_2_positive._2_getdeletinguser.RestfullBookerGetDeletedUserTestCases">
             </testcase>
 </testsuite>

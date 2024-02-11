@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker"
+<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker/src/test/java/org/restfullbooker"
            tests="4"
            failures="0"
            errors="0"
            skipped="0"
-           time="1.718">
+           time="1.438">
     <properties></properties>
 
 
 
             <testcase
-                name="resfullBookerGetAllBookingContainsFirstnameAsText"
-                time="0.006"
+                name="resfullBookerUpdateBookingStatusOk"
+                time="1.382"
+                classname="org.restfullbooker.task_3_positive._3_GitId.RestFullBookerGetIdTestCases">
+            </testcase>
+            <testcase
+                name="resfullBoookerGetBookingJsonSchema"
+                time="0.037"
                 classname="org.restfullbooker.task_3_positive._3_GitId.RestFullBookerGetIdTestCases">
             </testcase>
             <testcase
@@ -20,13 +25,8 @@
                 classname="org.restfullbooker.task_3_positive._3_GitId.RestFullBookerGetIdTestCases">
             </testcase>
             <testcase
-                name="resfullBoookerGetBookingJsonSchema"
-                time="0.024"
-                classname="org.restfullbooker.task_3_positive._3_GitId.RestFullBookerGetIdTestCases">
-            </testcase>
-            <testcase
-                name="resfullBookerUpdateBookingStatusOk"
-                time="1.684"
+                name="resfullBookerGetAllBookingContainsFirstnameAsText"
+                time="0.015"
                 classname="org.restfullbooker.task_3_positive._3_GitId.RestFullBookerGetIdTestCases">
             </testcase>
 </testsuite>

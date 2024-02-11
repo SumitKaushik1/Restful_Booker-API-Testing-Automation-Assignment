@@ -156,7 +156,7 @@ public class RestFullBookerRequestBookingWrongPayloadURL {
         //requestSpecification.accept(ContentType.JSON);//header is set
         //note bydefault the accept header response is json no need to specify that otherwise it will give error
          System.out.println(TOKEN);
-       requestSpecification.cookie(token);
+       requestSpecification.cookie(TOKEN);
         //requestSpecification.cookie("aafd2ca64353106");
         // Adding URI
         requestSpecification.baseUri("https://restful-booker.herokuapp.com");

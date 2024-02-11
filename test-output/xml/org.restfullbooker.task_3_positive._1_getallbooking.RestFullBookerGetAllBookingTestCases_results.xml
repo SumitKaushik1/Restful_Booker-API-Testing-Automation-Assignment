@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker"
+<testsuite name="J:/3. automation testing/day34-- folder structure of maven ,upload to github/Assignment Answers/restfullbooker/src/test/java/org/restfullbooker"
            tests="4"
            failures="0"
            errors="0"
            skipped="0"
-           time="6.993">
+           time="4.472">
     <properties></properties>
 
 
 
             <testcase
                 name="resfullBoookerGetBookingJsonSchema"
-                time="2.813"
-                classname="org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases">
-            </testcase>
-            <testcase
-                name="resfullBoookerGetAllBokingHeaderContentType"
-                time="0.009"
-                classname="org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases">
-            </testcase>
-            <testcase
-                name="resfullBookerGetAllBookingStatusOk"
-                time="2.867"
+                time="0.921"
                 classname="org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases">
             </testcase>
             <testcase
                 name="resfullBookerGetAllBookingContainsBookingIdAsText"
-                time="1.304"
+                time="1.889"
+                classname="org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBoookerGetAllBokingHeaderContentType"
+                time="0.132"
+                classname="org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases">
+            </testcase>
+            <testcase
+                name="resfullBookerGetAllBookingStatusOk"
+                time="1.530"
                 classname="org.restfullbooker.task_3_positive._1_getallbooking.RestFullBookerGetAllBookingTestCases">
             </testcase>
 </testsuite>

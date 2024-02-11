@@ -38,9 +38,6 @@ public class RestBookerRequestDeleteUserTestCases {
         System.out.println(response.getHeaders().toString());
         MatcherAssert.assertThat(response.getHeaders().hasHeaderWithName("Content-type"),Matchers.is(true));
 
-
-
-
     }
 
 

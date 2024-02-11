@@ -1,6 +1,6 @@
 package org.restfullbooker.task_1_positive._3_updatebookingname;
 
-import static org.restfullbooker.task_1_positive._2_createbooking.RestfullBookerCreateBookingTestCases.bookingidToUpdate;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
@@ -8,13 +8,12 @@ import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
-import org.restfullbooker.task_1_positive._1_createtoken.RestFullBookerRequestTokenURL;
-import org.restfullbooker.task_1_positive._2_createbooking.RestFullBookerRequestBookingURL;
+
 import org.testng.annotations.Test;
 
 import java.io.File;
 
-import static org.restfullbooker.task_1_positive._3_updatebookingname.RestFullBookerUpdateBookingURL.restFullBookerUpdateBookingURL;
+
 
 public class RestfullBookerUpdateBookingTestCases {
     @Test
