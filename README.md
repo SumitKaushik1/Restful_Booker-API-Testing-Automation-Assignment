@@ -1,5 +1,16 @@
 # Automation-Testing-Assignment
 
+## restful-booker
+API documentation link for the playground API restful-booker.
+`````````sh
+ https://restful-booker.herokuapp.com/apidoc/index.html
+`````````
+
+
+
+
+
+
 ## Tech Stack
 
 - Java          
@@ -9,7 +20,7 @@
 - Allure Reporter  
 - Gson, Jackson  
 
-RestFullBooker TestCases->    
+ ## TestCases    
 
 *task_1_positive->  
 
