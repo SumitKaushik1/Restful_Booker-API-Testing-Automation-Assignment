@@ -22,7 +22,7 @@ API documentation link for the playground API restful-booker.
 
  ## TestCases    
 
-*task_1_positive->  
+### task_1_positive->  
 
   _1_createtoken  
   _2_createbooking  
