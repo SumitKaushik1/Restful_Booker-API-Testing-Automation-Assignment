@@ -7,10 +7,6 @@ API documentation link for the playground API restful-booker.
 `````````
 
 
-
-
-
-
 ## Tech Stack
 
 - Java          
@@ -20,33 +16,33 @@ API documentation link for the playground API restful-booker.
 - Allure Reporter  
 - Gson, Jackson  
 
- ## TestCases    
+ ## Test Cases    
 
-### task_1_positive->  
+### task_1_positive/Positive TestCase  
 
-  _1_createtoken  
-  _2_createbooking  
-  _3_updatebookingname    
-  _4_getbooking  
+  - Create Token  
+  - Create Booking  
+  - Update Booking Name    
+  - Get Booking  
   
-*task_2_positive->  
-_1_deleteuser   
-_2_getdeletinguser   
+### task_2_positive/Positive TestCase
+  - Delete User   
+  - Get Deleted User   
 
-*task_3_positive->    
-_1_getallbooking  
-_2_updatebooking  
-_3_getId  
+### task_3_positive/Positive TestCase
+  - Get All Booking  
+  - Update Booking  
+  - Get Id  
 
-*task_4_positive  
-_1_createbooking  
-_2_deletebookingid  
+### task_4_positive/Positive TestCase
+- Create Booking
+- Delete Booking Id  
 
-*task_5_negative  
-_1_createtoken  
-_2_createbookingwrongpayload  
+### task_5_negative/Negative TestCase  
+- Create Token
+- Create Booking Wrong Payload  
 
-*task_6_negative  
-_1_getAllBooking  
-_2_deleteBookingid  
-_3_updatebooking  
+### task_6_negative/Negative TestCase  
+- Get All Booking  
+- Delete Booking Id  
+- Update Booking  
