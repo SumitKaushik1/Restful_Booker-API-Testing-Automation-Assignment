@@ -1,13 +1,13 @@
 # Automation-Testing-Assignment
 
-Tech Stack
+## Tech Stack
 
-*Java          
-*TestNG  
-*Maven  
-*Rest Assured  
-*Allure Reporter  
-*Gson, Jackson  
+- Java          
+- TestNG  
+- Maven  
+- Rest Assured  
+- Allure Reporter  
+- Gson, Jackson  
 
 RestFullBooker TestCases->    
 
